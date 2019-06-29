@@ -1,0 +1,18 @@
+version: '3'
+services:
+  app:
+    image: ${APP_IMAGE}
+    volumes:
+      - /root/logs/app:/usr/src/w-board/log
+    environment:
+      - RAILS_ENV
+  web:
+    image: ${WEB_IMAGE}
+    ports:
+      - 80:80
+      - 443:443
+    volumes:
+      - /root/secrets:/usr/secrets
+      - /root/logs/web:/var/log/nginx
+    depends_on:
+      - app
