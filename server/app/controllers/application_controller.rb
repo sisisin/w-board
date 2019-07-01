@@ -1,6 +1,5 @@
 class ApplicationController < ActionController::API
   def index
-    p = Project.all
-    render json: p
+    render json: Project.all.as_json(include: [:id])
   end
 end
