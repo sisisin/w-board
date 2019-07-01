@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :dependency do
-    name { "MyString" }
+    sequence(:name) { |n| "dependency#{n}" }
+    project
   end
 end

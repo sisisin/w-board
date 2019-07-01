@@ -1,6 +1,7 @@
 FactoryBot.define do
   factory :machine do
-    name { "MyString" }
-    machine_name_id { "MyString" }
+    sequence(:name) { |n| "machine#{n}" }
+    sequence(:machine_name_id) { |n| "machine_name_id_#{n}" }
+    project
   end
 end

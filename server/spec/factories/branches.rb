@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :branch do
-    name { "MyString" }
+    sequence(:name) { |n| "branch#{n}" }
+    project
   end
 end

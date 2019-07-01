@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :language do
-    name { "MyString" }
+    sequence(:name) { |n| "language#{n}" }
+    project
   end
 end
