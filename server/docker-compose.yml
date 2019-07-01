@@ -7,6 +7,7 @@ services:
     environment:
       - RAILS_ENV
       - DATABASE_URL
+    command: /bin/sh -c "rm -f /app/tmp/pids/server.pid && bundle exec rails s -b '0.0.0.0'"
     depends_on:
       - db
   web:
@@ -27,6 +28,6 @@ services:
       - MYSQL_PASSWORD
       - MYSQL_RANDOM_ROOT_PASSWORD=yes
     ports:
-      - "3306:3306"
+      - 3306:3306
     volumes:
       - ./mysql:/var/lib/mysql

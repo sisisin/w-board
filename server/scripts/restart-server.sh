@@ -30,9 +30,10 @@ function run_docker(){
     
     # todo: specify kill target
     # app_container_id=$(docker ps | grep w-board:$rev | awk '{print $1}')
-    [[ "$(docker ps -q)" != "" ]] && docker kill $(docker ps -q)
+    # [[ "$(docker ps -q)" != "" ]] && docker kill $(docker ps -q)
 
-    docker-compose up -d && docker-compose run app bin/rails db:migrate
+    docker-compose run --no-deps app bin/rails db:migrate
+    docker-compose up --no-deps -d app
 }
 
 run_docker
