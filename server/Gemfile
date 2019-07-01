@@ -23,6 +23,7 @@ gem 'bootsnap', '>= 1.1.0', require: false
 
 gem 'mysql2'
 gem 'httpclient'
+gem 'activerecord-import'
 
 group :development, :test do
   gem 'byebug', platforms: [:mri, :mingw, :x64_mingw]

@@ -1,0 +1,40 @@
+{
+  "data": [
+    {
+      "categories": [],
+      "dependencies": [],
+      "editors": [],
+      "grand_total": {
+        "digital": "11:05",
+        "hours": 11,
+        "minutes": 5,
+        "text": "11 hrs 5 mins",
+        "total_seconds": 39913.765193
+      },
+      "languages": [],
+      "machines": [],
+      "operating_systems": [],
+      "projects": [
+        {
+          "digital": "6:25:01",
+          "hours": 6,
+          "minutes": 25,
+          "name": "w-board",
+          "percent": 57.88,
+          "seconds": 1,
+          "text": "6 hrs 25 mins",
+          "total_seconds": 23101.093078
+        }
+      ],
+      "range": {
+        "date": "2019-06-30",
+        "end": "2019-06-30T14:59:59Z",
+        "start": "2019-06-29T15:00:00Z",
+        "text": "Yesterday",
+        "timezone": "Asia/Tokyo"
+      }
+    }
+  ],
+  "end": "2019-06-30T14:59:59Z",
+  "start": "2019-06-29T15:00:00Z"
+}
