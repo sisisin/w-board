@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_01_141027) do
+ActiveRecord::Schema.define(version: 2019_07_01_154836) do
+
+  create_table "branch_summaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.bigint "branch_id", null: false
+    t.date "date", null: false
+    t.decimal "total_seconds", precision: 20, scale: 6, null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["branch_id"], name: "index_branch_summaries_on_branch_id"
+    t.index ["date", "branch_id"], name: "index_branch_summaries_on_date_and_branch_id", unique: true
+  end
 
   create_table "branches", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.bigint "project_id", null: false
@@ -92,6 +102,7 @@ ActiveRecord::Schema.define(version: 2019_07_01_141027) do
     t.index ["name"], name: "index_projects_on_name", unique: true
   end
 
+  add_foreign_key "branch_summaries", "branches"
   add_foreign_key "branches", "projects"
   add_foreign_key "categories", "projects"
   add_foreign_key "dependencies", "projects"

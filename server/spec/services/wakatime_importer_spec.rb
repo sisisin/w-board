@@ -11,24 +11,24 @@ RSpec.describe WakatimeImporter, type: :model do
   describe "save master data" do
     context "success normally" do
       before { importer.main }
-    it "save to Project from API" do
-      expect(Project.all.map(&:name)).to match_array projects_mock["data"].first["projects"].map { |p| p["name"] }
-    end
-
-    [
-      [Branch, "branches"],
-      [Category, "categories"],
-      [Dependency, "dependencies"],
-      [Editor, "editors"],
-      [Entity, "entities"],
-      [Language, "languages"],
-      [Machine, "machines"],
-      [OperatingSystem, "operating_systems"],
-    ].each { |klass, prop|
-      it "save to #{klass.name} from API" do
-        expect(klass.all.map(&:name)).to match_array project_details_mock["data"].first[prop].map { |p| p["name"] }
+      it "save to Project from API" do
+        expect(Project.all.map(&:name)).to match_array projects_mock["data"].first["projects"].map { |p| p["name"] }
       end
-    }
+
+      [
+        [Branch, "branches"],
+        [Category, "categories"],
+        [Dependency, "dependencies"],
+        [Editor, "editors"],
+        [Entity, "entities"],
+        [Language, "languages"],
+        [Machine, "machines"],
+        [OperatingSystem, "operating_systems"],
+      ].each { |klass, prop|
+        it "save to #{klass.name} from API" do
+          expect(klass.all.map(&:name)).to match_array project_details_mock["data"].first[prop].map { |p| p["name"] }
+        end
+      }
     end
     context "exists duplicate project" do
       before do
@@ -54,6 +54,15 @@ RSpec.describe WakatimeImporter, type: :model do
     end
     it "contains master props" do
       expect(subject.keys).to contain_exactly("branches", "categories", "dependencies", "editors", "entities", "languages", "machines", "operating_systems")
+    end
+  end
+
+  describe "save summary" do
+    before { importer.main }
+    subject(:b_summaries) { BranchSummary.all.as_json(only: [:total_seconds], methods: [:name]) }
+
+    it "succeeds branch table" do
+      expect(b_summaries).to match_array project_details_mock["data"].first["branches"].map { |b| b.select { |k, _| ["name", "total_seconds"].include?(k) } }
     end
   end
 end
