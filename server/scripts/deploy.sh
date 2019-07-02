@@ -54,14 +54,37 @@ function exit_if_undefined_env_vars() {
     return 0
 }
 
+function create_env_file() {
+    local _repository=$1
+    local _revision=$2
+    cat <<EOF >"$script_dir/_env.sh"
+# for specify image with tag
+export APP_IMAGE=$_repository:$_revision
+export WEB_IMAGE=$_repository-nginx:$_revision
+export DB_IMAGE=$_repository-mysql:$_revision
+
+# for db
+export MYSQL_DATABASE=$MYSQL_DATABASE
+export MYSQL_USER=$MYSQL_USER
+export MYSQL_PASSWORD=$MYSQL_PASSWORD
+
+# for app
+export RAILS_ENV=$RAILS_ENV
+export DATABASE_URL="mysql2://$MYSQL_USER:$MYSQL_PASSWORD@db/$MYSQL_DATABASE"
+EOF
+}
+
 function deploy() {
-    local _revision=$1
-    local _rails_env=$2
     exit_if_undefined_env_vars
 
+    local _repository=$1
+    local _revision=$2
+
     echo "Start deployment"
+    create_env_file "$image_repository" "$revision"
+    scp "$script_dir/_env.sh" shizuku:/root/
     scp "$script_dir/../docker-compose.yml" shizuku:/root/
-    ssh shizuku 'bash -s' "$_revision" "$_rails_env" "$MYSQL_DATABASE" "$MYSQL_USER" "$MYSQL_PASSWORD" <"$script_dir/restart-server.sh"
+    ssh shizuku 'bash -s' "deploy" <"$script_dir/server-manipulator.sh"
 }
 
 readonly revision=$(git rev-parse --short=10 HEAD)
@@ -73,10 +96,10 @@ case "$command" in
 deploy)
     build "$image_repository" "$revision"
     push "$image_repository" "$revision"
-    deploy "$revision" "$RAILS_ENV"
+    deploy "$image_repository" "$revision"
     ;;
 restart)
-    deploy "$revision" "$RAILS_ENV"
+    deploy "$image_repository" "$revision"
     ;;
 build)
     build "$image_repository" "$revision"
