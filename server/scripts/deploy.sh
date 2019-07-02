@@ -74,17 +74,31 @@ export DATABASE_URL="mysql2://$MYSQL_USER:$MYSQL_PASSWORD@db/$MYSQL_DATABASE"
 EOF
 }
 
-function deploy() {
+function run_server_command() {
+    local _cmd=$1
+    ssh shizuku 'bash -s' "$_cmd" <"$script_dir/server-manipulator.sh"
+}
+
+function deploy_files() {
     exit_if_undefined_env_vars
 
     local _repository=$1
     local _revision=$2
 
-    echo "Start deployment"
+    echo "Start deployment files"
     create_env_file "$image_repository" "$revision"
+    run_server_command "prepare_logs"
+
     scp "$script_dir/_env.sh" shizuku:/root/
+    scp "$script_dir/run-import.sh" shizuku:/root/
+    scp "$script_dir/server-manipulator.sh" shizuku:/root/
+    scp "$script_dir/app_cron" shizuku:/etc/cron.d
     scp "$script_dir/../docker-compose.yml" shizuku:/root/
-    ssh shizuku 'bash -s' "deploy" <"$script_dir/server-manipulator.sh"
+}
+
+function deploy() {
+    echo "Start deployment"
+    run_server_command "deploy"
 }
 
 readonly revision=$(git rev-parse --short=10 HEAD)
@@ -96,7 +110,11 @@ case "$command" in
 deploy)
     build "$image_repository" "$revision"
     push "$image_repository" "$revision"
-    deploy "$image_repository" "$revision"
+    deploy_files "$image_repository" "$revision"
+    deploy
+    ;;
+deploy_files)
+    deploy_files "$image_repository" "$revision"
     ;;
 restart)
     deploy "$image_repository" "$revision"

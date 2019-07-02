@@ -2,8 +2,17 @@
 
 set -ef -o pipefail
 
-readonly script_dir=$(cd "$(dirname "$0")" && pwd)
+readonly work_dir=/root
 readonly command=$1
+
+
+function log_info(){
+    echo "[$(date '+%F %T')] $1"
+}
+
+function prepare_log_dirs() {
+    mkdir -p "$work_dir/logs/cron/"
+}
 
 function prepare_certs() {
     mkdir -p secrets
@@ -26,10 +35,22 @@ function run_docker() {
     docker-compose up --no-deps -d app
 }
 
+function run_import(){
+    source ./_env.sh
+    log_info "cron test $APP_IMAGE"
+}
+
+cd "$work_dir"
 case "$command" in
 deploy)
     prepare_certs
     run_docker
+    ;;
+prepare_logs)
+    prepare_log_dirs
+    ;;
+run_import)
+    run_import
     ;;
 *)
     echo "Unknown command: $command"
