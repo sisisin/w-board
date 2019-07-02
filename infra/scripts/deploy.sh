@@ -3,6 +3,8 @@
 set -ef -o pipefail
 
 readonly script_dir=$(cd "$(dirname "$0")" && pwd)
+readonly infra_dir="$script_dir/../"
+readonly server_dir="$script_dir/../../server"
 cd "$script_dir"
 
 function help() {
@@ -22,7 +24,7 @@ EOF
 }
 
 function run_rails_command() {
-    cd "$script_dir/../"
+    cd "$server_dir"
     eval "$1"
     cd "$script_dir"
 }
@@ -33,9 +35,9 @@ function build() {
     echo -e "Building: $_revision...\n"
 
     run_rails_command "bundle install"
-    docker build -t $_repository:$_revision "$script_dir/../"
-    docker build -t $_repository-nginx:$_revision "$script_dir/../docker/nginx"
-    docker build -t $_repository-mysql:$_revision "$script_dir/../docker/mysql"
+    docker build -t $_repository:$_revision "$server_dir"
+    docker build -t $_repository-nginx:$_revision "$infra_dir/docker/nginx"
+    docker build -t $_repository-mysql:$_revision "$infra_dir/docker/mysql"
 }
 
 function push() {
@@ -93,7 +95,7 @@ function deploy_files() {
     scp "$script_dir/run-import.sh" shizuku:/root/
     scp "$script_dir/server-manipulator.sh" shizuku:/root/
     scp "$script_dir/app_cron" shizuku:/etc/cron.d
-    scp "$script_dir/../docker-compose.yml" shizuku:/root/
+    scp "$infra_dir/docker-compose.yml" shizuku:/root/
 }
 
 function deploy() {
