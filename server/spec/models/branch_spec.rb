@@ -11,26 +11,20 @@ RSpec.describe Branch, type: :model do
     end
   end
 
-  describe ".of_project_and_names" do
-    let(:projects) { FactoryBot.create_list(:project, 2) }
-    let!(:branches) {
-      [
-        FactoryBot.create(:branch, project: projects[0], name: "master"),
-        FactoryBot.create(:branch, project: projects[0], name: "develop"),
-        FactoryBot.create(:branch, project: projects[1], name: "master"),
-      ]
-    }
+  describe ".of_names" do
+    let!(:branches) { FactoryBot.create_list(:branch, 3) }
 
-    context "specify project_id and names" do
-      subject(:one_name) { Branch.of_project_and_names(branches[0].project_id, branches.map(&:name)[0..0]).map(&:name) }
-      it "should return master" do
-        expect(one_name).to match_array branches.map(&:name)[0..0]
-      end
-
-      subject(:two_names) { Branch.of_project_and_names(branches[0].project_id, branches.map(&:name)[0..1]).map(&:name) }
-      it "should return master and develop" do
-        expect(two_names).to match_array branches.map(&:name)[0..1]
-      end
+    context "specify a name" do
+      subject { Branch.of_names(branches.map(&:name)[0..0]).map(&:name) }
+      it { is_expected.to match_array branches.map(&:name)[0..0] }
+    end
+    context "specify some names" do
+      subject { Branch.of_names(branches.map(&:name)[0..1]).map(&:name) }
+      it { is_expected.to match_array branches.map(&:name)[0..1] }
+    end
+    context "specify empty value" do
+      subject { Branch.of_names([]) }
+      it { is_expected.to eq branches }
     end
   end
 end
