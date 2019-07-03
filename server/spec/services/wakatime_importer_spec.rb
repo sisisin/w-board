@@ -59,10 +59,25 @@ RSpec.describe WakatimeImporter, type: :model do
 
   describe "save summary" do
     before { importer.main }
-    subject(:b_summaries) { BranchSummary.all.as_json(only: [:total_seconds], methods: [:name]) }
 
-    it "succeeds branch table" do
-      expect(b_summaries).to match_array project_details_mock["data"].first["branches"].map { |b| b.select { |k, _| ["name", "total_seconds"].include?(k) } }
+    def pick_values(key)
+      project_details_mock["data"].first[key].map { |item| item.select { |k, _| ["name", "total_seconds"].include?(k) } }
     end
+
+    [
+      ["branches", BranchSummary],
+      ["categories", CategorySummary],
+      ["dependencies", DependencySummary],
+      ["editors", EditorSummary],
+      ["entities", EntitySummary],
+      ["languages", LanguageSummary],
+      ["machines", MachineSummary],
+      ["operating_systems", OperatingSystemSummary],
+    ].each { |key, klass|
+      context "succeeds normally" do
+        subject { klass.all.as_json(only: [:total_seconds], methods: [:name]) }
+        it { is_expected.to match_array pick_values(key) }
+      end
+    }
   end
 end

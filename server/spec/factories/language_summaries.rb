@@ -1,7 +1,7 @@
 FactoryBot.define do
   factory :language_summary do
-    language { nil }
+    language
     date { "2019-07-04" }
-    total_seconds { "9.99" }
+    total_seconds { 1.5 }
   end
 end

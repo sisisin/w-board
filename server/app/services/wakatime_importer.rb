@@ -67,16 +67,25 @@ class WakatimeImporter
   end
 
   def bulk_insert_details(target_date, traversed, master_map)
-    # todo: bin/rails g model branch_summary branch:references date:date total_seconds:decimal{20,6}
-    [["branches", BranchSummary]].each { |key, klass|
+    [
+      ["branches", BranchSummary, :branch_id],
+      ["categories", CategorySummary, :category_id],
+      ["dependencies", DependencySummary, :dependency_id],
+      ["editors", EditorSummary, :editor_id],
+      ["entities", EntitySummary, :entity_id],
+      ["languages", LanguageSummary, :language_id],
+      ["machines", MachineSummary, :machine_id],
+      ["operating_systems", OperatingSystemSummary, :operating_system_id],
+    ].each { |key, klass, ref|
       summaries = traversed[key].map { |_, detail|
-        klass.new(
-          branch_id: master_map[key].fetch("#{detail["project_id"]}_#{detail["name"]}").id,
-          date: target_date,
-          total_seconds: detail["total_seconds"],
-        )
+        params = [
+          [ref, master_map[key].fetch("#{detail["project_id"]}_#{detail["name"]}").id],
+          [:date, target_date],
+          [:total_seconds, detail["total_seconds"]],
+        ].to_h
+        klass.new(params)
       }
-      klass.import summaries, ignore: false
+      klass.import summaries, ignore: true
     }
   end
 end
