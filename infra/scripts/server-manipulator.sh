@@ -5,8 +5,7 @@ set -ef -o pipefail
 readonly work_dir=/root
 readonly command=$1
 
-
-function log_info(){
+function log_info() {
     echo "[$(date '+%F %T')] $1"
 }
 
@@ -35,9 +34,11 @@ function run_docker() {
     docker-compose up --no-deps -d app
 }
 
-function run_import(){
+function run_import() {
     source ./_env.sh
-    log_info "cron test $APP_IMAGE"
+    log_info "start import"
+    docker-compose run --no-deps app bin/rake import
+    log_info "end import"
 }
 
 cd "$work_dir"
