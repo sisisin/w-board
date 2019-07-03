@@ -24,8 +24,7 @@ class WakatimeImporter
     traversed = traverse(project_detail_map)
     bulk_insert_masters(traversed)
 
-    master_map = get_master_map(traversed)
-    bulk_insert_details(target_date, traversed, master_map)
+    bulk_insert_details(target_date, traversed)
   end
 
 =begin
@@ -66,7 +65,9 @@ class WakatimeImporter
     }
   end
 
-  def bulk_insert_details(target_date, traversed, master_map)
+  def bulk_insert_details(target_date, traversed)
+    master_map = get_master_map(traversed)
+
     [
       ["branches", BranchSummary, :branch_id],
       ["categories", CategorySummary, :category_id],

@@ -16,17 +16,17 @@ RSpec.describe WakatimeImporter, type: :model do
       end
 
       [
-        [Branch, "branches"],
-        [Category, "categories"],
-        [Dependency, "dependencies"],
-        [Editor, "editors"],
-        [Entity, "entities"],
-        [Language, "languages"],
-        [Machine, "machines"],
-        [OperatingSystem, "operating_systems"],
-      ].each { |klass, prop|
+        ["branches", Branch],
+        ["categories", Category],
+        ["dependencies", Dependency],
+        ["editors", Editor],
+        ["entities", Entity],
+        ["languages", Language],
+        ["machines", Machine],
+        ["operating_systems", OperatingSystem],
+      ].each { |key, klass|
         it "save to #{klass.name} from API" do
-          expect(klass.all.map(&:name)).to match_array project_details_mock["data"].first[prop].map { |p| p["name"] }
+          expect(klass.all.map(&:name)).to match_array project_details_mock["data"].first[key].map { |p| p["name"] }
         end
       }
     end
