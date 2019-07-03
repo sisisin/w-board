@@ -1,0 +1,576 @@
+{
+  "available_branches": ["master"],
+  "branches": [],
+  "data": [
+    {
+      "branches": [
+        {
+          "digital": "7:04:00",
+          "hours": 7,
+          "minutes": 4,
+          "name": "master",
+          "percent": 98.53,
+          "seconds": 0,
+          "text": "7 hrs 4 mins",
+          "total_seconds": 25440.513085
+        },
+        {
+          "digital": "0:06:20",
+          "hours": 0,
+          "minutes": 6,
+          "name": "Unknown",
+          "percent": 1.47,
+          "seconds": 20,
+          "text": "6 mins",
+          "total_seconds": 380.54787
+        }
+      ],
+      "categories": [
+        {
+          "digital": "7:10:21",
+          "hours": 7,
+          "minutes": 10,
+          "name": "Coding",
+          "percent": 100.0,
+          "seconds": 21,
+          "text": "7 hrs 10 mins",
+          "total_seconds": 25821.060955
+        }
+      ],
+      "dependencies": [],
+      "editors": [
+        {
+          "digital": "7:10:21",
+          "hours": 7,
+          "minutes": 10,
+          "name": "VS Code",
+          "percent": 100.0,
+          "seconds": 21,
+          "text": "7 hrs 10 mins",
+          "total_seconds": 25821.060955
+        }
+      ],
+      "entities": [
+        {
+          "digital": "2:15:23",
+          "hours": 2,
+          "minutes": 15,
+          "name": "/Users/sample-user/w-board/server/scripts/restart-server.sh",
+          "percent": 31.46,
+          "seconds": 23,
+          "text": "2 hrs 15 mins",
+          "total_seconds": 8123.520214,
+          "type": "file"
+        },
+        {
+          "digital": "1:19:44",
+          "hours": 1,
+          "minutes": 19,
+          "name": "/Users/sample-user/w-board/server/config/puma.rb",
+          "percent": 18.53,
+          "seconds": 44,
+          "text": "1 hr 19 mins",
+          "total_seconds": 4784.35155,
+          "type": "file"
+        },
+        {
+          "digital": "1:11:32",
+          "hours": 1,
+          "minutes": 11,
+          "name": "/Users/sample-user/w-board/server/Dockerfile",
+          "percent": 16.63,
+          "seconds": 32,
+          "text": "1 hr 11 mins",
+          "total_seconds": 4292.917247,
+          "type": "file"
+        },
+        {
+          "digital": "0:54:07",
+          "hours": 0,
+          "minutes": 54,
+          "name": "/Users/sample-user/w-board/server/scripts/deploy.sh",
+          "percent": 12.58,
+          "seconds": 7,
+          "text": "54 mins",
+          "total_seconds": 3247.82078,
+          "type": "file"
+        },
+        {
+          "digital": "0:17:20",
+          "hours": 0,
+          "minutes": 17,
+          "name": "/Users/sample-user/w-board/server/config/environments/production.rb",
+          "percent": 4.03,
+          "seconds": 20,
+          "text": "17 mins",
+          "total_seconds": 1040.201179,
+          "type": "file"
+        },
+        {
+          "digital": "0:14:23",
+          "hours": 0,
+          "minutes": 14,
+          "name": "/Users/sample-user/w-board/server/Gemfile.lock",
+          "percent": 3.34,
+          "seconds": 23,
+          "text": "14 mins",
+          "total_seconds": 863.060133,
+          "type": "file"
+        },
+        {
+          "digital": "0:12:24",
+          "hours": 0,
+          "minutes": 12,
+          "name": "/Users/sample-user/w-board/server/scripts/run-server.sh",
+          "percent": 2.88,
+          "seconds": 24,
+          "text": "12 mins",
+          "total_seconds": 744.431237,
+          "type": "file"
+        },
+        {
+          "digital": "0:10:21",
+          "hours": 0,
+          "minutes": 10,
+          "name": "/Users/sample-user/w-board/server/README.md",
+          "percent": 2.41,
+          "seconds": 21,
+          "text": "10 mins",
+          "total_seconds": 621.304737,
+          "type": "file"
+        },
+        {
+          "digital": "0:07:04",
+          "hours": 0,
+          "minutes": 7,
+          "name": "/Users/sample-user/w-board/server/.gitignore",
+          "percent": 1.64,
+          "seconds": 4,
+          "text": "7 mins",
+          "total_seconds": 424.238267,
+          "type": "file"
+        },
+        {
+          "digital": "0:05:05",
+          "hours": 0,
+          "minutes": 5,
+          "name": "/Users/sample-user/w-board/server/config/environments/development.rb",
+          "percent": 1.18,
+          "seconds": 5,
+          "text": "5 mins",
+          "total_seconds": 305.155477,
+          "type": "file"
+        },
+        {
+          "digital": "0:04:18",
+          "hours": 0,
+          "minutes": 4,
+          "name": "/Users/sample-user/w-board/server/config/routes.rb",
+          "percent": 1.0,
+          "seconds": 18,
+          "text": "4 mins",
+          "total_seconds": 258.516988,
+          "type": "file"
+        },
+        {
+          "digital": "0:03:22",
+          "hours": 0,
+          "minutes": 3,
+          "name": "/Users/sample-user/w-board/server/log/production.log",
+          "percent": 0.78,
+          "seconds": 22,
+          "text": "3 mins",
+          "total_seconds": 202.373098,
+          "type": "file"
+        },
+        {
+          "digital": "0:02:32",
+          "hours": 0,
+          "minutes": 2,
+          "name": "/Users/sample-user/w-board/server/docker/nginx/nginx.conf",
+          "percent": 0.59,
+          "seconds": 32,
+          "text": "2 mins",
+          "total_seconds": 152.558819,
+          "type": "file"
+        },
+        {
+          "digital": "0:02:12",
+          "hours": 0,
+          "minutes": 2,
+          "name": "/Users/sample-user/w-board/server/docker-compose.yml",
+          "percent": 0.51,
+          "seconds": 12,
+          "text": "2 mins",
+          "total_seconds": 132.512852,
+          "type": "file"
+        },
+        {
+          "digital": "0:02:07",
+          "hours": 0,
+          "minutes": 2,
+          "name": "/Users/sample-user/w-board/server/config/master.key",
+          "percent": 0.49,
+          "seconds": 7,
+          "text": "2 mins",
+          "total_seconds": 127.627591,
+          "type": "file"
+        },
+        {
+          "digital": "0:01:56",
+          "hours": 0,
+          "minutes": 1,
+          "name": "/Users/sample-user/w-board/server/docker/nginx/Dockerfile",
+          "percent": 0.45,
+          "seconds": 56,
+          "text": "1 min",
+          "total_seconds": 116.423083,
+          "type": "file"
+        },
+        {
+          "digital": "0:01:16",
+          "hours": 0,
+          "minutes": 1,
+          "name": "/Users/sample-user/w-board/s/config/routes.rb",
+          "percent": 0.3,
+          "seconds": 16,
+          "text": "1 min",
+          "total_seconds": 76.410183,
+          "type": "file"
+        },
+        {
+          "digital": "0:01:13",
+          "hours": 0,
+          "minutes": 1,
+          "name": "/Users/sample-user/w-board/server/lib/tasks/build.rake",
+          "percent": 0.29,
+          "seconds": 13,
+          "text": "1 min",
+          "total_seconds": 73.971542,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:59",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/config/application.rb",
+          "percent": 0.23,
+          "seconds": 59,
+          "text": "59 secs",
+          "total_seconds": 59.110061,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:42",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/Gemfile",
+          "percent": 0.17,
+          "seconds": 42,
+          "text": "42 secs",
+          "total_seconds": 42.828371,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:20",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/log/development.log",
+          "percent": 0.08,
+          "seconds": 20,
+          "text": "20 secs",
+          "total_seconds": 20.993793,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:16",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/.ruby-version",
+          "percent": 0.06,
+          "seconds": 16,
+          "text": "16 secs",
+          "total_seconds": 16.543533,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:15",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/bin/spring",
+          "percent": 0.06,
+          "seconds": 15,
+          "text": "15 secs",
+          "total_seconds": 15.55732,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:14",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/app/controllers/application_controller.rb",
+          "percent": 0.06,
+          "seconds": 14,
+          "text": "14 secs",
+          "total_seconds": 14.310306,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:12",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/s/config/environments/production.rb",
+          "percent": 0.05,
+          "seconds": 12,
+          "text": "12 secs",
+          "total_seconds": 12.28406,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:10",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/config/credentials.yml.enc",
+          "percent": 0.04,
+          "seconds": 10,
+          "text": "10 secs",
+          "total_seconds": 10.976795,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:09",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/secret/.keep",
+          "percent": 0.04,
+          "seconds": 9,
+          "text": "9 secs",
+          "total_seconds": 9.180033,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:09",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/config.ru",
+          "percent": 0.04,
+          "seconds": 9,
+          "text": "9 secs",
+          "total_seconds": 9.042284,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:06",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/Rakefile",
+          "percent": 0.03,
+          "seconds": 6,
+          "text": "6 secs",
+          "total_seconds": 6.577019,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:03",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/s/Gemfile.lock",
+          "percent": 0.01,
+          "seconds": 3,
+          "text": "3 secs",
+          "total_seconds": 3.804805,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:03",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/secret/server.csr",
+          "percent": 0.01,
+          "seconds": 3,
+          "text": "3 secs",
+          "total_seconds": 3.155609,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:02",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/secret/server.crt",
+          "percent": 0.01,
+          "seconds": 2,
+          "text": "2 secs",
+          "total_seconds": 2.894542,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:02",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/secret/server.key",
+          "percent": 0.01,
+          "seconds": 2,
+          "text": "2 secs",
+          "total_seconds": 2.853816,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:01",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/secret/production.log",
+          "percent": 0.01,
+          "seconds": 1,
+          "text": "1 sec",
+          "total_seconds": 1.955161,
+          "type": "file"
+        },
+        {
+          "digital": "0:00:01",
+          "hours": 0,
+          "minutes": 0,
+          "name": "/Users/sample-user/w-board/server/secret/development.log",
+          "percent": 0.01,
+          "seconds": 1,
+          "text": "1 sec",
+          "total_seconds": 1.59847,
+          "type": "file"
+        }
+      ],
+      "grand_total": {
+        "digital": "7:10",
+        "hours": 7,
+        "minutes": 10,
+        "text": "7 hrs 10 mins",
+        "total_seconds": 25821.060955
+      },
+      "languages": [
+        {
+          "digital": "3:21:55",
+          "hours": 3,
+          "minutes": 21,
+          "name": "Bash",
+          "percent": 46.92,
+          "seconds": 55,
+          "text": "3 hrs 21 mins",
+          "total_seconds": 12115.772231
+        },
+        {
+          "digital": "1:51:13",
+          "hours": 1,
+          "minutes": 51,
+          "name": "Ruby",
+          "percent": 25.85,
+          "seconds": 13,
+          "text": "1 hr 51 mins",
+          "total_seconds": 6673.716736
+        },
+        {
+          "digital": "1:13:29",
+          "hours": 1,
+          "minutes": 13,
+          "name": "Docker",
+          "percent": 17.08,
+          "seconds": 29,
+          "text": "1 hr 13 mins",
+          "total_seconds": 4409.34033
+        },
+        {
+          "digital": "0:21:31",
+          "hours": 0,
+          "minutes": 21,
+          "name": "Other",
+          "percent": 5.0,
+          "seconds": 31,
+          "text": "21 mins",
+          "total_seconds": 1291.616983
+        },
+        {
+          "digital": "0:10:21",
+          "hours": 0,
+          "minutes": 10,
+          "name": "Markdown",
+          "percent": 2.41,
+          "seconds": 21,
+          "text": "10 mins",
+          "total_seconds": 621.304737
+        },
+        {
+          "digital": "0:07:04",
+          "hours": 0,
+          "minutes": 7,
+          "name": "Git Config",
+          "percent": 1.64,
+          "seconds": 4,
+          "text": "7 mins",
+          "total_seconds": 424.238267
+        },
+        {
+          "digital": "0:02:32",
+          "hours": 0,
+          "minutes": 2,
+          "name": "Nginx configuration file",
+          "percent": 0.59,
+          "seconds": 32,
+          "text": "2 mins",
+          "total_seconds": 152.558819
+        },
+        {
+          "digital": "0:02:12",
+          "hours": 0,
+          "minutes": 2,
+          "name": "YAML",
+          "percent": 0.51,
+          "seconds": 12,
+          "text": "2 mins",
+          "total_seconds": 132.512852
+        }
+      ],
+      "machines": [
+        {
+          "digital": "6:53:39",
+          "hours": 6,
+          "machine_name_id": "6b230289-94fa-4623-8c34-3b884c2cc632",
+          "minutes": 53,
+          "name": "sample-machine from 123.456.789.012",
+          "percent": 96.12,
+          "seconds": 39,
+          "text": "6 hrs 53 mins",
+          "total_seconds": 24819.663529
+        },
+        {
+          "digital": "0:16:41",
+          "hours": 0,
+          "machine_name_id": "49d604ea-e3ea-41a7-9dcc-e08a1924b08b",
+          "minutes": 16,
+          "name": "sample-machine-2 from 123.456.789.012",
+          "percent": 3.88,
+          "seconds": 41,
+          "text": "16 mins",
+          "total_seconds": 1001.397426
+        }
+      ],
+      "operating_systems": [
+        {
+          "digital": "7:10:21",
+          "hours": 7,
+          "minutes": 10,
+          "name": "Mac",
+          "percent": 100.0,
+          "seconds": 21,
+          "text": "7 hrs 10 mins",
+          "total_seconds": 25821.060955
+        }
+      ],
+      "range": {
+        "date": "2019-06-29",
+        "end": "2019-06-29T14:59:59Z",
+        "start": "2019-06-28T15:00:00Z",
+        "text": "Sat Jun 29th 2019",
+        "timezone": "Asia/Tokyo"
+      }
+    }
+  ],
+  "end": "2019-06-29T14:59:59Z",
+  "start": "2019-06-28T15:00:00Z"
+}

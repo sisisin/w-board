@@ -1,0 +1,5 @@
+docker/mysql/mysql/*
+!docker/mysql/mysql/.keep
+
+.envrc
+_env.sh

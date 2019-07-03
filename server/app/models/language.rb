@@ -1,3 +1,3 @@
 class Language < ApplicationRecord
-  validates :name, uniqueness: true
+  include BasicMaster
 end

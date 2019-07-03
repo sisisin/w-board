@@ -2,12 +2,17 @@
 
 set -ef -o pipefail
 
-readonly script_dir=$(cd "$(dirname "$0")" && pwd)
-readonly rev=$1
-readonly rails_env=${2:-production}
-export MYSQL_DATABASE=$3
-export MYSQL_USER=$4
-export MYSQL_PASSWORD=$5
+readonly work_dir=/root
+readonly command=$1
+
+
+function log_info(){
+    echo "[$(date '+%F %T')] $1"
+}
+
+function prepare_log_dirs() {
+    mkdir -p "$work_dir/logs/cron/"
+}
 
 function prepare_certs() {
     mkdir -p secrets
@@ -17,17 +22,11 @@ function prepare_certs() {
     cp /etc/letsencrypt/live/api.w-board.sisisin.house/privkey.pem ./secrets
 }
 
-prepare_certs
+function run_docker() {
+    source ./_env.sh
 
-export APP_IMAGE=sisisin/w-board:$rev
-export WEB_IMAGE=sisisin/w-board-nginx:$rev
-export DB_IMAGE=sisisin/w-board-mysql:$rev
-export RAILS_ENV=$rails_env
-export DATABASE_URL="mysql2://$MYSQL_USER:$MYSQL_PASSWORD@db/$MYSQL_DATABASE"
-
-function run_docker(){
     docker-compose pull
-    
+
     # todo: specify kill target
     # app_container_id=$(docker ps | grep w-board:$rev | awk '{print $1}')
     # [[ "$(docker ps -q)" != "" ]] && docker kill $(docker ps -q)
@@ -36,4 +35,25 @@ function run_docker(){
     docker-compose up --no-deps -d app
 }
 
-run_docker
+function run_import(){
+    source ./_env.sh
+    log_info "cron test $APP_IMAGE"
+}
+
+cd "$work_dir"
+case "$command" in
+deploy)
+    prepare_certs
+    run_docker
+    ;;
+prepare_logs)
+    prepare_log_dirs
+    ;;
+run_import)
+    run_import
+    ;;
+*)
+    echo "Unknown command: $command"
+    exit 1
+    ;;
+esac

@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :entity do
-    name { "MyString" }
+    sequence(:name) { |n| "entity#{n}" }
+    project
   end
 end

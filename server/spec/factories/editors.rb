@@ -1,5 +1,6 @@
 FactoryBot.define do
   factory :editor do
-    name { "MyString" }
+    sequence(:name) { |n| "editor#{n}" }
+    project
   end
 end

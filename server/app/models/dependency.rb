@@ -1,3 +1,3 @@
 class Dependency < ApplicationRecord
-  validates :name, uniqueness: true
+  include BasicMaster
 end

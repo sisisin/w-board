@@ -1,3 +1,3 @@
 class Branch < ApplicationRecord
-  validates :name, uniqueness: true
+  include BasicMaster
 end
