@@ -53,6 +53,7 @@ function exit_if_undefined_env_vars() {
     [[ -z "${MYSQL_DATABASE+UNDEF}" ]] && echo "MYSQL_DATABASE must be set" && exit 1
     [[ -z "${MYSQL_USER+UNDEF}" ]] && echo "MYSQL_USER must be set" && exit 1
     [[ -z "${MYSQL_PASSWORD+UNDEF}" ]] && echo "MYSQL_PASSWORD must be set" && exit 1
+    [[ -z "${WAKATIME_API_KEY+UNDEF}" ]] && echo "WAKATIME_API_KEY must be set" && exit 1
     return 0
 }
 
@@ -73,6 +74,7 @@ export MYSQL_PASSWORD=$MYSQL_PASSWORD
 # for app
 export RAILS_ENV=$RAILS_ENV
 export DATABASE_URL="mysql2://$MYSQL_USER:$MYSQL_PASSWORD@db/$MYSQL_DATABASE"
+export WAKATIME_API_KEY=$WAKATIME_API_KEY
 EOF
 }
 
