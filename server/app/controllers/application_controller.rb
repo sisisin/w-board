@@ -1,5 +1,11 @@
 class ApplicationController < ActionController::API
   def index
-    render json: Project.all.as_json(include: [:id])
+    langs = LanguageSummary
+      .joins(:language)
+      .group("languages.name")
+      .group(:date)
+      .select(:date, "SUM(total_seconds) as total_seconds", "languages.name as name")
+
+    render json: langs.as_json(only: [:date], methods: [:digital, :name])
   end
 end
