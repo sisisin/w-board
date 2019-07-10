@@ -1,5 +1,7 @@
 class WakatimeImporter
-  def initialize
+  def initialize(target_date = Date.yesterday)
+    @target_date = target_date
+    @raw_uploader = WakatimeRawUploader.new(target_date)
     @w_client = WakatimeClient.new
     @master_classes = [
       ["branches", Branch],
@@ -13,18 +15,27 @@ class WakatimeImporter
     ]
   end
 
-  def main(target_date = Date.yesterday)
-    Rails.logger.info "start import from #{target_date}"
-    project_names = @w_client.get_projects(target_date)["data"].first["projects"].map { |p| p["name"] }
+  def main
+    Rails.logger.info "start import from #{@target_date}"
+    project_summaries = @w_client.get_projects(@target_date)
+    project_names = project_summaries["data"].first["projects"].map { |p| p["name"] }
     Project.import project_names.map { |name| Project.new(name: name) }, ignore: true
 
     target_projects = Project.of_names(project_names)
-    project_detail_map = target_projects.map { |p| [p.id, @w_client.get_project_details(p.name, target_date)] }.to_h
+    project_details = target_projects.map { |p|
+      { project: p, body: @w_client.get_project_details(p.name, @target_date) }
+    }
 
-    traversed = traverse(project_detail_map)
+    backup_raws(project_summaries, project_details)
+
+    traversed = traverse(project_details)
     bulk_insert_masters(traversed)
 
-    bulk_insert_details(target_date, traversed)
+    bulk_insert_details(traversed)
+  end
+
+  def backup_raws(project_summaries, project_details)
+    @raw_uploader.upload(project_summaries, project_details)
   end
 
 =begin
@@ -35,11 +46,13 @@ class WakatimeImporter
 =end
   def traverse(project_detail_map)
     @master_classes.map { |key, _|
-      value = project_detail_map.flat_map { |project_id, detail|
-        detail["data"].first[key].map { |item|
+      value = project_detail_map.flat_map { |detail|
+        p = detail.fetch(:project)
+        body = detail.fetch(:body)
+        body["data"].first[key].map { |item|
           [
-            "#{project_id}_#{item["name"]}",
-            { "project_id" => project_id, "name" => item["name"], "total_seconds" => item["total_seconds"] },
+            "#{p.id}_#{item["name"]}",
+            { "project_id" => p.id, "name" => item["name"], "total_seconds" => item["total_seconds"] },
           ]
         }
       }.to_h
@@ -65,7 +78,7 @@ class WakatimeImporter
     }
   end
 
-  def bulk_insert_details(target_date, traversed)
+  def bulk_insert_details(traversed)
     master_map = get_master_map(traversed)
 
     [
@@ -81,7 +94,7 @@ class WakatimeImporter
       summaries = traversed[key].map { |_, detail|
         params = [
           [ref, master_map[key].fetch("#{detail["project_id"]}_#{detail["name"]}").id],
-          [:date, target_date],
+          [:date, @target_date],
           [:total_seconds, detail["total_seconds"]],
         ].to_h
         klass.new(params)
