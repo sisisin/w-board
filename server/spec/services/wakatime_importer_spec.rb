@@ -43,10 +43,10 @@ RSpec.describe WakatimeImporter, type: :model do
   end
 
   describe "#traverse" do
-    let(:project_detail_map) { { '1': project_details_mock } }
+    let(:project_detail_map) { [{ project: FactoryBot.build(:project, id: 1), body: project_details_mock }] }
     expected = {
-      "1_master" => { "project_id" => :"1", "name" => "master", "total_seconds" => 25440.513085 },
-      "1_Unknown" => { "project_id" => :"1", "name" => "Unknown", "total_seconds" => 380.54787 },
+      "1_master" => { "project_id" => 1, "name" => "master", "total_seconds" => 25440.513085 },
+      "1_Unknown" => { "project_id" => 1, "name" => "Unknown", "total_seconds" => 380.54787 },
     }
     subject { importer.traverse(project_detail_map) }
     it "traverse wakatime response json" do

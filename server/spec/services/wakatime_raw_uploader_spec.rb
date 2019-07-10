@@ -13,7 +13,13 @@ RSpec.describe WakatimeRawUploader, type: :model do
     before :all do
       delete_all_in_directory(s3, bucket_name, prefix)
       WakatimeRawUploader.new(target_date, prefix: prefix)
-        .upload({ summaries: 1 }, { "project_a" => { summaries_of_json: 2 }, "project_b" => { summaries_of_json: 3 } })
+        .upload(
+          { summaries: 1 },
+          [
+            { project: FactoryBot.build(:project, name: "project_a"), body: { summaries_of_json: 2 } },
+            { project: FactoryBot.build(:project, name: "project_b"), body: { summaries_of_json: 3 } },
+          ]
+        )
     end
     after :all do
       delete_all_in_directory(s3, bucket_name, prefix)

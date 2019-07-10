@@ -11,19 +11,22 @@ class WakatimeRawUploader
     "summaries-of-#{project_name}-response.json"
   end
 
-  def upload(summaries, summaries_of_project_map)
+  def upload(summaries, project_details)
     put_to_s3(@summaries_file_name, summaries.to_json)
-    summaries_of_project_map.each { |project_name, project_summaries|
-      put_to_s3(get_summaries_of_project_file_name(project_name), project_summaries.to_json)
+    project_details.each { |detail|
+      project = detail.fetch(:project)
+      body = detail.fetch(:body)
+      put_to_s3(get_summaries_of_project_file_name(project.name), body.to_json)
     }
 
     meta = {
       :summaries => { key: "#{@prefix}/#{@summaries_file_name}", target_date: @target_date },
-      :"project-summaries" => summaries_of_project_map.map { |project_name, _|
-        [project_name, {
-          key: "#{@prefix}/#{get_summaries_of_project_file_name(project_name)}",
+      :"project-summaries" => project_details.map { |detail|
+        project = detail.fetch(:project)
+        [project.name, {
+          key: "#{@prefix}/#{get_summaries_of_project_file_name(project.name)}",
           target_date: @target_date,
-          name: project_name,
+          name: project.name,
         }]
       }.to_h,
     }
