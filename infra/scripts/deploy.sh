@@ -54,6 +54,8 @@ function exit_if_undefined_env_vars() {
     [[ -z "${MYSQL_USER+UNDEF}" ]] && echo "MYSQL_USER must be set" && exit 1
     [[ -z "${MYSQL_PASSWORD+UNDEF}" ]] && echo "MYSQL_PASSWORD must be set" && exit 1
     [[ -z "${WAKATIME_API_KEY+UNDEF}" ]] && echo "WAKATIME_API_KEY must be set" && exit 1
+    [[ -z "${AWS_ACCESS_KEY_ID+UNDEF}" ]] && echo "AWS_ACCESS_KEY_ID must be set" && exit 1
+    [[ -z "${AWS_SECRET_ACCESS_KEY+UNDEF}" ]] && echo "AWS_SECRET_ACCESS_KEY must be set" && exit 1
     return 0
 }
 
@@ -75,6 +77,8 @@ export MYSQL_PASSWORD=$MYSQL_PASSWORD
 export RAILS_ENV=$RAILS_ENV
 export DATABASE_URL="mysql2://$MYSQL_USER:$MYSQL_PASSWORD@db/$MYSQL_DATABASE"
 export WAKATIME_API_KEY=$WAKATIME_API_KEY
+export AWS_ACCESS_KEY_ID=$AWS_ACCESS_KEY_ID
+export AWS_SECRET_ACCESS_KEY=$AWS_SECRET_ACCESS_KEY
 EOF
 }
 
