@@ -46,6 +46,27 @@ GEM
       tzinfo (~> 1.1)
     arel (9.0.0)
     ast (2.4.0)
+    aws-eventstream (1.0.1)
+    aws-partitions (1.123.0)
+    aws-sdk-core (3.44.0)
+      aws-eventstream (~> 1.0)
+      aws-partitions (~> 1.0)
+      aws-sigv4 (~> 1.0)
+      jmespath (~> 1.0)
+    aws-sdk-kms (1.13.0)
+      aws-sdk-core (~> 3, >= 3.39.0)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-rails (2.1.0)
+      aws-sdk-ses (~> 1)
+      railties (>= 3)
+    aws-sdk-s3 (1.30.0)
+      aws-sdk-core (~> 3, >= 3.39.0)
+      aws-sdk-kms (~> 1)
+      aws-sigv4 (~> 1.0)
+    aws-sdk-ses (1.14.0)
+      aws-sdk-core (~> 3, >= 3.39.0)
+      aws-sigv4 (~> 1.0)
+    aws-sigv4 (1.0.3)
     backport (1.1.1)
     bootsnap (1.4.4)
       msgpack (~> 1.0)
@@ -68,6 +89,7 @@ GEM
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     jaro_winkler (1.5.3)
+    jmespath (1.4.0)
     kramdown (1.17.0)
     listen (3.1.5)
       rb-fsevent (~> 0.9, >= 0.9.4)
@@ -196,6 +218,8 @@ PLATFORMS
 
 DEPENDENCIES
   activerecord-import
+  aws-sdk-rails
+  aws-sdk-s3
   bootsnap (>= 1.1.0)
   byebug
   factory_bot_rails
