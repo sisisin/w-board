@@ -26,10 +26,16 @@ class WakatimeImporter
       { project: p, body: @w_client.get_project_details(p.name, @target_date) }
     }
 
+    backup_raws(project_summaries, project_details)
+
     traversed = traverse(project_details)
     bulk_insert_masters(traversed)
 
     bulk_insert_details(traversed)
+  end
+
+  def backup_raws(project_summaries, project_details)
+    @raw_uploader.upload(project_summaries, project_details)
   end
 
 =begin

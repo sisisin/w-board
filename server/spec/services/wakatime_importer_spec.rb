@@ -1,13 +1,23 @@
 RSpec.describe WakatimeImporter, type: :model do
   let(:project_details_mock) { JSON.load(File.open(File.join(Rails.root, "spec", "fixtures", "summaries_of_project.json"))) }
   let(:projects_mock) { JSON.load(File.open(File.join(Rails.root, "spec", "fixtures", "summaries.json"))) }
+  let(:raw_uploader_double) { double("raw_uploader", upload: nil) }
   let(:importer) do
     w = WakatimeImporter.new
-    wakatime_client_doubel = double("wakatime_client", get_projects: projects_mock, get_project_details: project_details_mock)
-    w.instance_variable_set("@w_client", wakatime_client_doubel)
+    wakatime_client_double = double("wakatime_client", get_projects: projects_mock, get_project_details: project_details_mock)
+    w.instance_variable_set("@w_client", wakatime_client_double)
+    w.instance_variable_set("@raw_uploader", raw_uploader_double)
     w
   end
 
+  describe "backup raw json" do
+    before { importer.main }
+    subject { raw_uploader_double }
+    it "should call once" do
+      expect(subject).to receive(:upload).once
+      importer.main
+    end
+  end
   describe "save master data" do
     context "success normally" do
       before { importer.main }
