@@ -36,7 +36,6 @@ function build() {
 
     run_rails_command "bundle install"
     docker build -t $_repository:$_revision "$server_dir"
-    docker build -t $_repository-nginx:$_revision "$infra_dir/docker/nginx"
     docker build -t $_repository-mysql:$_revision "$infra_dir/docker/mysql"
 }
 
@@ -45,7 +44,6 @@ function push() {
     local _revision=$2
     docker login
     docker push $_repository:$_revision
-    docker push $_repository-nginx:$_revision
     docker push $_repository-mysql:$_revision
 }
 
@@ -65,7 +63,6 @@ function create_env_file() {
     cat <<EOF >"$script_dir/_env.sh"
 # for specify image with tag
 export APP_IMAGE=$_repository:$_revision
-export WEB_IMAGE=$_repository-nginx:$_revision
 export DB_IMAGE=$_repository-mysql:$_revision
 
 # for db
@@ -102,6 +99,7 @@ function deploy_files() {
     scp "$script_dir/server-manipulator.sh" shizuku:/root/
     scp "$script_dir/app_cron" shizuku:/etc/cron.d
     scp "$infra_dir/docker-compose.yml" shizuku:/root/
+    scp -r "$infra_dir/docker/nginx" shizuku:/root/
 }
 
 function deploy() {
@@ -124,6 +122,9 @@ deploy)
 deploy_files)
     deploy_files "$image_repository" "$revision"
     ;;
+restart_middlewares)
+    run_server_command "restart_middlewares"
+    ;;
 restart)
     deploy "$image_repository" "$revision"
     ;;
@@ -131,6 +132,7 @@ build)
     build "$image_repository" "$revision"
     ;;
 push)
+    build "$image_repository" "$revision"
     push "$image_repository" "$revision"
     ;;
 *)

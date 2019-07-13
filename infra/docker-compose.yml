@@ -14,13 +14,14 @@ services:
     depends_on:
       - db
   web:
-    image: ${WEB_IMAGE}
+    image: nginx:1.17.0
     ports:
       - 80:80
       - 443:443
     volumes:
       - /root/secrets:/usr/secrets
       - /root/logs/web:/var/log/nginx
+      - /root/nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - app
   db:
