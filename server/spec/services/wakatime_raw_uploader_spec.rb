@@ -1,3 +1,5 @@
+require "rails_helper"
+
 RSpec.describe WakatimeRawUploader, type: :model do
   describe "#upload", external_api: true do
     s3 = Aws::S3::Client.new
