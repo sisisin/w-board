@@ -14,17 +14,18 @@ services:
     depends_on:
       - db
   web:
-    image: ${WEB_IMAGE}
+    image: nginx:1.17.0
     ports:
       - 80:80
       - 443:443
     volumes:
       - /root/secrets:/usr/secrets
       - /root/logs/web:/var/log/nginx
+      - /root/nginx/conf.d:/etc/nginx/conf.d
     depends_on:
       - app
   db:
-    image: ${DB_IMAGE}
+    image: mysql:8.0.16
     environment:
       - MYSQL_DATABASE
       - MYSQL_USER
@@ -33,4 +34,5 @@ services:
     ports:
       - 3306:3306
     volumes:
-      - ./mysql:/var/lib/mysql
+      - /root/mysql/mysql:/var/lib/mysql
+      - /root/mysql/conf.d:/etc/mysql/conf.d

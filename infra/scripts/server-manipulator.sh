@@ -34,6 +34,11 @@ function run_docker() {
     docker-compose up --no-deps -d app
 }
 
+function restart_middlewares() {
+    source ./_env.sh
+    docker-compose up -d
+}
+
 function run_import() {
     source ./_env.sh
     log_info "start import"
@@ -46,6 +51,9 @@ case "$command" in
 deploy)
     prepare_certs
     run_docker
+    ;;
+restart_middlewares)
+    restart_middlewares
     ;;
 prepare_logs)
     prepare_log_dirs

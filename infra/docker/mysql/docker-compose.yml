@@ -8,4 +8,4 @@ services:
       - "3306:3306"
     volumes:
       - ./mysql:/var/lib/mysql
-      - ./mysql.conf.d:/etc/mysql/conf.d
+      - ./conf.d:/etc/mysql/conf.d
