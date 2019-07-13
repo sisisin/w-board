@@ -56,6 +56,8 @@ function exit_if_undefined_env_vars() {
 }
 
 function create_env_file() {
+    exit_if_undefined_env_vars
+
     local _repository=$1
     local _revision=$2
     cat <<EOF >"$script_dir/_env.sh"
@@ -82,9 +84,6 @@ function run_server_command() {
 }
 
 function deploy_files() {
-    # todo: move to create_env_file()
-    exit_if_undefined_env_vars
-
     local _repository=$1
     local _revision=$2
 
