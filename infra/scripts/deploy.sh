@@ -36,7 +36,6 @@ function build() {
 
     run_rails_command "bundle install"
     docker build -t $_repository:$_revision "$server_dir"
-    docker build -t $_repository-mysql:$_revision "$infra_dir/docker/mysql"
 }
 
 function push() {
@@ -44,7 +43,6 @@ function push() {
     local _revision=$2
     docker login
     docker push $_repository:$_revision
-    docker push $_repository-mysql:$_revision
 }
 
 function exit_if_undefined_env_vars() {
@@ -63,7 +61,6 @@ function create_env_file() {
     cat <<EOF >"$script_dir/_env.sh"
 # for specify image with tag
 export APP_IMAGE=$_repository:$_revision
-export DB_IMAGE=$_repository-mysql:$_revision
 
 # for db
 export MYSQL_DATABASE=$MYSQL_DATABASE
@@ -85,6 +82,7 @@ function run_server_command() {
 }
 
 function deploy_files() {
+    # todo: move to create_env_file()
     exit_if_undefined_env_vars
 
     local _repository=$1
@@ -100,6 +98,7 @@ function deploy_files() {
     scp "$script_dir/app_cron" shizuku:/etc/cron.d
     scp "$infra_dir/docker-compose.yml" shizuku:/root/
     scp -r "$infra_dir/docker/nginx" shizuku:/root/
+    ssh shizuku "mkdir -p /root/mysql" && scp -r "$infra_dir/docker/mysql/conf.d" shizuku:/root/mysql/conf.d
 }
 
 function deploy() {
