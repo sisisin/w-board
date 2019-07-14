@@ -5,6 +5,27 @@ workflows:
     jobs:
       - ruby-test
 
+commands:
+  prepare_env:
+    steps:
+      - checkout:
+          path: ~/repo
+
+      - restore_cache:
+          keys:
+          - v1-dependencies-{{ checksum "Gemfile.lock" }}
+          - v1-dependencies-
+      - run: gem install bundler
+      - run:
+          name: install dependencies
+          command: |
+            bundle install --jobs=4 --retry=3 --path vendor/bundle
+      - save_cache:
+          paths:
+            - ./vendor/bundle
+          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
+
+
 jobs:
   ruby-test:
     docker:
@@ -21,32 +42,13 @@ jobs:
     working_directory: ~/repo/server
 
     steps:
-      - checkout:
-          path: ~/repo
-
-      - restore_cache:
-          keys:
-          - v1-dependencies-{{ checksum "Gemfile.lock" }}
-          - v1-dependencies-
-
-      - run: gem install bundler
-      - run:
-          name: install dependencies
-          command: |
-            bundle install --jobs=4 --retry=3 --path vendor/bundle
-
-      - save_cache:
-          paths:
-            - ./vendor/bundle
-          key: v1-dependencies-{{ checksum "Gemfile.lock" }}
-
+      - prepare_env
       - run:
           name: Wait for MySQL
           command: dockerize -wait tcp://127.0.0.1:3306 -timeout 120s
       - run: bin/rails db:create
-      - run: bin/rails db:schema:load
+      - run: bin/rails db:migrate
       - run: git diff --exit-code
-
       - run:
           name: run tests
           command: |
