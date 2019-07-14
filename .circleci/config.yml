@@ -4,6 +4,14 @@ workflows:
   main:
     jobs:
       - ruby-test
+      - deploy:
+          requires:
+            - ruby-test
+          filters:
+            branches:
+              only:
+                - master
+                - chore/ci
 
 commands:
   prepare_env:
@@ -27,6 +35,18 @@ commands:
 
 
 jobs:
+  deploy:
+    docker:
+      - image: circleci/ruby:2.5.3-node-browsers
+        environment:
+          BUNDLER_VERSION: 2.0.2
+    working_directory: ~/repo/server
+    steps:
+      - prepare_env
+      - run: git tag ver-$(git rev-parse --short=10 HEAD)
+      - run:
+          command: |
+            git push origin --tags
   ruby-test:
     docker:
       - image: circleci/ruby:2.5.3-node-browsers
