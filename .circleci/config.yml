@@ -33,7 +33,6 @@ commands:
             - ./vendor/bundle
           key: v1-dependencies-{{ checksum "Gemfile.lock" }}
 
-
 jobs:
   deploy:
     docker:
@@ -42,11 +41,17 @@ jobs:
           BUNDLER_VERSION: 2.0.2
     working_directory: ~/repo/server
     steps:
-      - prepare_env
-      - run: git tag ver-$(git rev-parse --short=10 HEAD)
+      - checkout:
+          path: ~/repo
+      - run: gem install bundler
       - run:
+          name: install dependencies
           command: |
-            git push origin --tags
+            bundle install --jobs=4 --retry=3
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run: docker login -u $DOCKERHUB_USER -p $DOCKERHUB_PASSWORD
+      - run: ../infra/scripts/deploy.sh push
   ruby-test:
     docker:
       - image: circleci/ruby:2.5.3-node-browsers
