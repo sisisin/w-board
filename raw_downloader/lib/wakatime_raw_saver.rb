@@ -5,7 +5,7 @@ require 'aws-sdk-s3'
 
 class WakatimeRawSaver
   def initialize
-    @target_date = Date.today -1
+    @target_date = Date.today - 1
     @uploader = WakatimeRawUploader.new(@target_date)
     @w_client = WakatimeClient.new
   end
@@ -21,12 +21,14 @@ class WakatimeRawSaver
     }.to_h
     puts "got projects: #{project_details.keys.join(',')}"
     
+    downloaded_at = DateTime.now
     out = {
+      meta: { downloaded_at: downloaded_at },
       parameters: { target_date: @target_date },
       summaries: project_summaries,
       by_details: project_details
     }
-    @uploader.put_to_s3(out.to_json)
+    @uploader.put_to_s3(out)
 
     puts "end process."
   end
