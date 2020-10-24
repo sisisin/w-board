@@ -4,9 +4,9 @@ require 'date'
 require 'aws-sdk-s3'
 
 class WakatimeRawSaver
-  def initialize
-    @target_date = Date.today - 1
-    @uploader = WakatimeRawUploader.new(@target_date)
+  def initialize(target_date = Date.today - 1)
+    @target_date = target_date
+    @uploader = WakatimeRawUploader.new
     @w_client = WakatimeClient.new
   end
 

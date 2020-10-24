@@ -2,5 +2,5 @@ require_relative './lib/wakatime_raw_saver'
 
 desc 'upload to s3'
 task :upload_to_s3 do
-  WakatimeRawSaver.new.run
+  WakatimeRawSaver.new(Date.today - 1).run
 end
