@@ -1,0 +1,35 @@
+AWSTemplateFormatVersion: 2010-09-09
+Transform: AWS::Serverless-2016-10-31
+Parameters:
+  WakatimeApiKey:
+    Type: String
+  RawOutputBucketArn:
+    Type: String
+Resources:
+  WakatimeRawDownloaderFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: lib/lambda.handler
+      Runtime: ruby2.7
+      Timeout: 30
+      Events:
+        DailyPut:
+          Type: Schedule
+          Properties: # 15:10 UTC+0000 <- 24:10 UTC+0900
+            Schedule: cron(10 15 * * ? *)
+      Environment:
+        Variables:
+          TZ: Asia/Tokyo
+          WAKATIME_API_KEY: 
+            Ref: WakatimeApiKey
+      Policies:
+      - Statement:
+        - Sid: S3PutPolicy
+          Effect: Allow
+          Action:
+            - 's3:PutObject'
+            - 's3:PutObjectAcl'
+            - 's3:PutLifecycleConfiguration'
+          Resource: 
+            - !Ref RawOutputBucketArn
+            - !Sub ${RawOutputBucketArn}/*
