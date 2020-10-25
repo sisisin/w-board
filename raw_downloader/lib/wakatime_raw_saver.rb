@@ -38,6 +38,9 @@ class WakatimeRawSaver
     @uploader.put_to_s3(out)
 
     puts "end process."
-    @tw_client.update("@Azsimeji [w-board] dl completed. target_date: #{@target_date}, downloaded_at: #{out[:meta][:downloaded_at]}")
+    msg_header = "@Azsimeji [w-board] dl completed."
+    total = "#{project_summaries["data"].first["grand_total"]["text"]} on #{@target_date}."
+    meta = "downloaded_at: #{out[:meta][:downloaded_at]}."
+    @tw_client.update("#{msg_header} #{total} #{meta}")
   end
 end
