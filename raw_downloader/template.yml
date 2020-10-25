@@ -3,6 +3,14 @@ Transform: AWS::Serverless-2016-10-31
 Parameters:
   WakatimeApiKey:
     Type: String
+  TwConsumerKey:
+    Type: String
+  TwConsumerSecret:
+    Type: String
+  TwAccessToken:
+    Type: String
+  TwAccessTokenSecret:
+    Type: String
   RawOutputBucketArn:
     Type: String
 Resources:
@@ -20,8 +28,11 @@ Resources:
       Environment:
         Variables:
           TZ: Asia/Tokyo
-          WAKATIME_API_KEY: 
-            Ref: WakatimeApiKey
+          WAKATIME_API_KEY: !Ref WakatimeApiKey
+          TW_CONSUMER_KEY: !Ref TwConsumerKey
+          TW_CONSUMER_SECRET: !Ref TwConsumerSecret
+          TW_ACCESS_TOKEN: !Ref TwAccessToken
+          TW_ACCESS_TOKEN_SECRET: !Ref TwAccessTokenSecret
       Policies:
       - Statement:
         - Sid: S3PutPolicy

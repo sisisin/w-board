@@ -15,7 +15,7 @@ function deploy() {
         --region ap-northeast-1 \
         --stack-name wakatime-raw-downloader-stack \
         --capabilities CAPABILITY_IAM \
-        --parameter-overrides "WakatimeApiKey=\"$WAKATIME_API_KEY\" RawOutputBucketArn=${RAW_OUTPUT_BUCKET_ARN}" \
+        --parameter-overrides "WakatimeApiKey=$WAKATIME_API_KEY RawOutputBucketArn=${RAW_OUTPUT_BUCKET_ARN} TwConsumerKey=${TW_CONSUMER_KEY} TwConsumerSecret=${TW_CONSUMER_SECRET} TwAccessToken=${TW_ACCESS_TOKEN} TwAccessTokenSecret=${TW_ACCESS_TOKEN_SECRET}" \
         --profile $PROFILE_NAME
 }
 

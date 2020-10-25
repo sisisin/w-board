@@ -1,6 +1,8 @@
 GEM
   remote: https://rubygems.org/
   specs:
+    addressable (2.7.0)
+      public_suffix (>= 2.0.2, < 5.0)
     ast (2.4.1)
     aws-eventstream (1.1.0)
     aws-partitions (1.385.0)
@@ -20,18 +22,43 @@ GEM
       aws-eventstream (~> 1, >= 1.0.2)
     backport (1.1.2)
     benchmark (0.1.0)
+    buftok (0.2.0)
+    domain_name (0.5.20190701)
+      unf (>= 0.0.5, < 1.0.0)
     e2mmap (0.1.0)
+    equalizer (0.0.11)
+    ffi (1.13.1)
+    ffi-compiler (1.0.1)
+      ffi (>= 1.0.0)
+      rake
+    http (4.4.1)
+      addressable (~> 2.3)
+      http-cookie (~> 1.0)
+      http-form_data (~> 2.2)
+      http-parser (~> 1.2.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
+    http-form_data (2.3.0)
+    http-parser (1.2.1)
+      ffi-compiler (>= 1.0, < 2.0)
+    http_parser.rb (0.6.0)
     httpclient (2.8.3)
     jaro_winkler (1.5.4)
     jmespath (1.4.0)
     maruku (0.7.3)
+    memoizable (0.4.2)
+      thread_safe (~> 0.3, >= 0.3.1)
     mini_portile2 (2.4.0)
+    multipart-post (2.1.1)
+    naught (1.1.0)
     nokogiri (1.10.10)
       mini_portile2 (~> 2.4.0)
     parallel (1.19.2)
     parser (2.7.2.0)
       ast (~> 2.4.1)
+    public_suffix (4.0.6)
     rainbow (3.0.0)
+    rake (13.0.1)
     regexp_parser (1.8.2)
     reverse_markdown (2.0.0)
       nokogiri
@@ -48,6 +75,7 @@ GEM
     rubocop-ast (1.0.1)
       parser (>= 2.7.1.5)
     ruby-progressbar (1.10.1)
+    simple_oauth (0.3.1)
     solargraph (0.39.17)
       backport (~> 1.1)
       benchmark
@@ -63,7 +91,22 @@ GEM
       tilt (~> 2.0)
       yard (~> 0.9, >= 0.9.24)
     thor (1.0.1)
+    thread_safe (0.3.6)
     tilt (2.0.10)
+    twitter (7.0.0)
+      addressable (~> 2.3)
+      buftok (~> 0.2.0)
+      equalizer (~> 0.0.11)
+      http (~> 4.0)
+      http-form_data (~> 2.0)
+      http_parser.rb (~> 0.6.0)
+      memoizable (~> 0.4.0)
+      multipart-post (~> 2.0)
+      naught (~> 1.0)
+      simple_oauth (~> 0.3.0)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.7)
     unicode-display_width (1.7.0)
     yard (0.9.25)
 
@@ -74,6 +117,7 @@ DEPENDENCIES
   aws-sdk-s3
   httpclient
   solargraph
+  twitter
 
 RUBY VERSION
    ruby 2.7.1p83
