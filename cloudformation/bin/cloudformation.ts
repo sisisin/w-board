@@ -1,7 +1,12 @@
 #!/usr/bin/env node
 import 'source-map-support/register';
 import * as cdk from '@aws-cdk/core';
-import { CloudformationStack } from '../lib/cloudformation-stack';
+import { VpcStack } from '../lib/vpc-stack';
+import { deployStages } from '../lib/constants';
+import { DBStack } from '../lib/db-stack';
 
 const app = new cdk.App();
-new CloudformationStack(app, 'CloudformationStack');
+deployStages.forEach((deployStage) => {
+  const vpcStack = new VpcStack(app, `${deployStage}VpcStack`, {}, { deployStage });
+  const dbStack = new DBStack(app, `${deployStage}DBStack`, {}, { deployStage, vpcStack });
+});
