@@ -1,3 +1,5 @@
+require "rails_helper"
+
 RSpec.describe WakatimeImporter, type: :model do
   let(:project_details_mock) { JSON.load(File.open(File.join(Rails.root, "spec", "fixtures", "summaries_of_project.json"))) }
   let(:projects_mock) { JSON.load(File.open(File.join(Rails.root, "spec", "fixtures", "summaries.json"))) }
@@ -69,11 +71,6 @@ RSpec.describe WakatimeImporter, type: :model do
 
   describe "save summary" do
     before { importer.main }
-
-    def pick_values(key)
-      project_details_mock["data"].first[key].map { |item| item.select { |k, _| ["name", "total_seconds"].include?(k) } }
-    end
-
     [
       ["branches", BranchSummary],
       ["categories", CategorySummary],
@@ -84,9 +81,10 @@ RSpec.describe WakatimeImporter, type: :model do
       ["machines", MachineSummary],
       ["operating_systems", OperatingSystemSummary],
     ].each { |key, klass|
-      context "succeeds normally" do
+      context "#{key} succeeds normally" do
+        let(:expected_values) { project_details_mock["data"].first[key].map { |item| { 'name' => item['name'], 'total_seconds' => item['total_seconds'].to_s } } }
         subject { klass.all.as_json(only: [:total_seconds], methods: [:name]) }
-        it { is_expected.to match_array pick_values(key) }
+        it { is_expected.to match_array expected_values }
       end
     }
   end
