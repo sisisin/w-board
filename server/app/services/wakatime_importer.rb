@@ -16,6 +16,15 @@ class WakatimeImporter
   end
 
   def main
+    job = ImportJob.find_job_to_run
+    if job.nil?
+      Rails.logger.info "There is no waiting job, exit import."
+      return
+    end
+
+    job.status = :doing
+    job.save
+
     Rails.logger.info "start import from #{@target_date}"
     project_summaries = @w_client.get_projects(@target_date)
     project_names = project_summaries["data"].first["projects"].map { |p| p["name"] }

@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_07_03_151432) do
+ActiveRecord::Schema.define(version: 2019_07_03_182640) do
 
   create_table "branch_summaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
     t.bigint "branch_id", null: false
@@ -105,6 +105,14 @@ ActiveRecord::Schema.define(version: 2019_07_03_151432) do
     t.datetime "updated_at", null: false
     t.index ["date", "entity_id"], name: "index_entity_summaries_on_date_and_entity_id", unique: true
     t.index ["entity_id"], name: "index_entity_summaries_on_entity_id"
+  end
+
+  create_table "import_jobs", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|
+    t.string "status", null: false
+    t.date "target_date", null: false
+    t.string "detail"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
   create_table "language_summaries", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_bin", force: :cascade do |t|

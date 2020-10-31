@@ -46,6 +46,13 @@ function run_import() {
     log_info "end import"
 }
 
+function run_create_job() {
+    source ./_env.sh
+    log_info "start create job"
+    docker-compose run --no-deps app bin/rake create_job
+    log_info "end create job"
+}
+
 cd "$work_dir"
 case "$command" in
 deploy)
@@ -60,6 +67,9 @@ prepare_logs)
     ;;
 run_import)
     run_import
+    ;;
+run_create_job)
+    run_create_job
     ;;
 *)
     echo "Unknown command: $command"

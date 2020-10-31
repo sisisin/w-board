@@ -20,7 +20,10 @@ RSpec.describe WakatimeImporter, type: :model do
   end
   describe "save master data" do
     context "success normally" do
-      before { importer.main }
+      before {
+        FactoryBot.create(:import_job, status: :waiting)
+        importer.main
+      }
       it "save to Project from API" do
         expect(Project.all.map(&:name)).to match_array projects_mock["data"].first["projects"].map { |p| p["name"] }
       end
@@ -68,7 +71,10 @@ RSpec.describe WakatimeImporter, type: :model do
   end
 
   describe "save summary" do
-    before { importer.main }
+    before {
+      FactoryBot.create(:import_job, status: :waiting)
+      importer.main
+    }
 
     def pick_values(key)
       project_details_mock["data"].first[key].map { |item| item.select { |k, _| ["name", "total_seconds"].include?(k) } }
