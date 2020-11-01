@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class ImportRunner
   def initialize(storage_mode: :local)
     @storage_mode = storage_mode
@@ -13,6 +15,7 @@ class ImportRunner
 
     case @storage_mode
     when :local
+      # todo
     when :s3
       s3 = Aws::S3::Client.new
 
@@ -26,7 +29,6 @@ class ImportRunner
       raise "Unknown storage_mode: #{@storage_mode}"
     end
 
-    result = JSON.parse(File.open(tmp_path, 'r').read.to_str)
-    result
+    JSON.parse(File.open(tmp_path, 'r').read.to_str)
   end
 end

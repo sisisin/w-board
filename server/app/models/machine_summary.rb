@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class MachineSummary < ApplicationRecord
   belongs_to :machine
 

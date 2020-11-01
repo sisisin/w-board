@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DependencySummary < ApplicationRecord
   belongs_to :dependency
 

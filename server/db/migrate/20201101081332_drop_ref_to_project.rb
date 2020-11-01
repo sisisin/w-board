@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class DropRefToProject < ActiveRecord::Migration[6.0]
   def up
     remove_index :categories, [:name, :project_id]

@@ -1,0 +1,42 @@
+# The behavior of RuboCop can be controlled via the .rubocop.yml
+# configuration file. It makes it possible to enable/disable
+# certain cops (checks) and to alter their behavior if they accept
+# any parameters. The file can be placed either in your home
+# directory or in some project directory.
+#
+# RuboCop will start looking for the configuration file in the directory
+# where the inspected file is and continue its way up to the root directory.
+#
+# See https://docs.rubocop.org/rubocop/configuration
+require:
+  - rubocop-rspec
+  - rubocop-rails
+AllCops:
+  NewCops: enable
+Style/SymbolArray:
+  EnforcedStyle: brackets
+Naming/MethodParameterName:
+  AllowedNames:
+    - s3
+RSpec/ContextWording:
+  Enabled: false
+Style/Lambda:
+  EnforcedStyle: literal
+Rails/Delegate:
+  Enabled: false
+Style/Documentation:
+  Enabled: false
+Metrics/AbcSize:
+  Max: 35
+  Exclude:
+    - db/migrate/**.rb
+Rails/NotNullColumn:
+  Enabled: false
+Metrics/MethodLength:
+  Exclude:
+    - db/migrate/20190701141027_add_project_reference.rb
+    - db/migrate/20190703151432_create_summaries.rb
+    - db/migrate/20201101081332_drop_ref_to_project.rb
+  Max: 30
+Metrics/CyclomaticComplexity:
+  Max: 10

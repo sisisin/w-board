@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 module BasicMasterWithProject
   extend ActiveSupport::Concern
 
@@ -7,7 +9,7 @@ module BasicMasterWithProject
     validates :project_id, uniqueness: { scope: [:name] }
 
     scope :of_names, ->(names) {
-      if ((safe_names = (names || []).reject(&:blank?)).present?)
+      if (safe_names = (names || []).reject(&:blank?)).present?
         where(name: safe_names)
       end
     }
