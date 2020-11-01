@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class Project < ApplicationRecord
   has_many :branches, dependent: :destroy
   has_many :categories, dependent: :destroy
@@ -11,8 +13,8 @@ class Project < ApplicationRecord
   validates :name, uniqueness: true
 
   scope :of_names, ->(names = []) {
-          if (safe_names = (names || []).reject(&:blank?)).present?
-            where(name: safe_names)
-          end
-        }
+                     if (safe_names = (names || []).reject(&:blank?)).present?
+                       where(name: safe_names)
+                     end
+                   }
 end

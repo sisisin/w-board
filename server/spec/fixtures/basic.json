@@ -1,0 +1,1686 @@
+{
+  "meta": {
+    "downloaded_at": "2020-10-25T20:16:00+09:00"
+  },
+  "parameters": {
+    "target_date": "2020-10-18"
+  },
+  "summaries": {
+    "data": [
+      {
+        "categories": [
+          {
+            "digital": "7:05:06",
+            "hours": 7,
+            "minutes": 5,
+            "name": "Coding",
+            "percent": 100.0,
+            "seconds": 6,
+            "text": "7 hrs 5 mins",
+            "total_seconds": 25506.999524
+          }
+        ],
+        "dependencies": [],
+        "editors": [
+          {
+            "digital": "7:05:06",
+            "hours": 7,
+            "minutes": 5,
+            "name": "VS Code",
+            "percent": 100.0,
+            "seconds": 6,
+            "text": "7 hrs 5 mins",
+            "total_seconds": 25506.999524
+          }
+        ],
+        "grand_total": {
+          "digital": "7:05",
+          "hours": 7,
+          "minutes": 5,
+          "text": "7 hrs 5 mins",
+          "total_seconds": 25506.999524
+        },
+        "languages": [
+          {
+            "digital": "5:41:52",
+            "hours": 5,
+            "minutes": 41,
+            "name": "TypeScript",
+            "percent": 80.42,
+            "seconds": 52,
+            "text": "5 hrs 41 mins",
+            "total_seconds": 20512.897641
+          },
+          {
+            "digital": "1:16:13",
+            "hours": 1,
+            "minutes": 16,
+            "name": "JavaScript",
+            "percent": 17.93,
+            "seconds": 13,
+            "text": "1 hr 16 mins",
+            "total_seconds": 4573.15165
+          },
+          {
+            "digital": "0:06:27",
+            "hours": 0,
+            "minutes": 6,
+            "name": "JSON",
+            "percent": 1.52,
+            "seconds": 27,
+            "text": "6 mins",
+            "total_seconds": 387.657162
+          },
+          {
+            "digital": "0:00:26",
+            "hours": 0,
+            "minutes": 0,
+            "name": "Markdown",
+            "percent": 0.1,
+            "seconds": 26,
+            "text": "26 secs",
+            "total_seconds": 26.102941
+          },
+          {
+            "digital": "0:00:06",
+            "hours": 0,
+            "minutes": 0,
+            "name": "Git Config",
+            "percent": 0.03,
+            "seconds": 6,
+            "text": "6 secs",
+            "total_seconds": 6.679333
+          },
+          {
+            "digital": "0:00:00",
+            "hours": 0,
+            "minutes": 0,
+            "name": "Other",
+            "percent": 0.0,
+            "seconds": 0,
+            "text": "0 secs",
+            "total_seconds": 0.510797
+          }
+        ],
+        "machines": [
+          {
+            "digital": "7:05:06",
+            "hours": 7,
+            "machine_name_id": "e3625541-34bc-464e-b27f-117e99d9f302",
+            "minutes": 5,
+            "name": "sisisinnoMacBook-Pro.local",
+            "percent": 100.0,
+            "seconds": 6,
+            "text": "7 hrs 5 mins",
+            "total_seconds": 25506.999524
+          }
+        ],
+        "operating_systems": [
+          {
+            "digital": "7:05:06",
+            "hours": 7,
+            "minutes": 5,
+            "name": "Mac",
+            "percent": 100.0,
+            "seconds": 6,
+            "text": "7 hrs 5 mins",
+            "total_seconds": 25506.999524
+          }
+        ],
+        "projects": [
+          {
+            "digital": "3:48:47",
+            "hours": 3,
+            "minutes": 48,
+            "name": "next-typeless",
+            "percent": 53.82,
+            "seconds": 47,
+            "text": "3 hrs 48 mins",
+            "total_seconds": 13727.905548
+          },
+          {
+            "digital": "2:13:46",
+            "hours": 2,
+            "minutes": 13,
+            "name": "nextjs-blog",
+            "percent": 31.47,
+            "seconds": 46,
+            "text": "2 hrs 13 mins",
+            "total_seconds": 8026.091009
+          },
+          {
+            "digital": "0:32:01",
+            "hours": 0,
+            "minutes": 32,
+            "name": "typeless-starter",
+            "percent": 7.53,
+            "seconds": 1,
+            "text": "32 mins",
+            "total_seconds": 1921.674262
+          },
+          {
+            "digital": "0:28:21",
+            "hours": 0,
+            "minutes": 28,
+            "name": "create-react-app-starter",
+            "percent": 6.67,
+            "seconds": 21,
+            "text": "28 mins",
+            "total_seconds": 1701.975539
+          },
+          {
+            "digital": "0:02:09",
+            "hours": 0,
+            "minutes": 2,
+            "name": "typeless",
+            "percent": 0.51,
+            "seconds": 9,
+            "text": "2 mins",
+            "total_seconds": 129.353166
+          }
+        ],
+        "range": {
+          "date": "2020-10-18",
+          "end": "2020-10-18T14:59:59Z",
+          "start": "2020-10-17T15:00:00Z",
+          "text": "Sun Oct 18th 2020",
+          "timezone": "Asia/Tokyo"
+        }
+      }
+    ],
+    "end": "2020-10-18T14:59:59Z",
+    "start": "2020-10-17T15:00:00Z"
+  },
+  "by_details": {
+    "next-typeless": {
+      "available_branches": [
+        "master"
+      ],
+      "branches": [],
+      "data": [
+        {
+          "branches": [
+            {
+              "digital": "3:48:47",
+              "hours": 3,
+              "minutes": 48,
+              "name": "master",
+              "percent": 100.0,
+              "seconds": 47,
+              "text": "3 hrs 48 mins",
+              "total_seconds": 13727.905548
+            }
+          ],
+          "categories": [
+            {
+              "digital": "3:48:47",
+              "hours": 3,
+              "minutes": 48,
+              "name": "Coding",
+              "percent": 100.0,
+              "seconds": 47,
+              "text": "3 hrs 48 mins",
+              "total_seconds": 13727.905548
+            }
+          ],
+          "dependencies": [],
+          "editors": [
+            {
+              "digital": "3:48:47",
+              "hours": 3,
+              "minutes": 48,
+              "name": "VS Code",
+              "percent": 100.0,
+              "seconds": 47,
+              "text": "3 hrs 48 mins",
+              "total_seconds": 13727.905548
+            }
+          ],
+          "entities": [
+            {
+              "digital": "1:03:54",
+              "hours": 1,
+              "minutes": 3,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/pages/_app.tsx",
+              "percent": 27.93,
+              "seconds": 54,
+              "text": "1 hr 3 mins",
+              "total_seconds": 3834.851536,
+              "type": "file"
+            },
+            {
+              "digital": "0:43:43",
+              "hours": 0,
+              "minutes": 43,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/pages/counter.tsx",
+              "percent": 19.11,
+              "seconds": 43,
+              "text": "43 mins",
+              "total_seconds": 2623.200963,
+              "type": "file"
+            },
+            {
+              "digital": "0:23:14",
+              "hours": 0,
+              "minutes": 23,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/features/counter/counter.tsx",
+              "percent": 10.16,
+              "seconds": 14,
+              "text": "23 mins",
+              "total_seconds": 1394.19773,
+              "type": "file"
+            },
+            {
+              "digital": "0:22:29",
+              "hours": 0,
+              "minutes": 22,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/features/counter.tsx",
+              "percent": 9.83,
+              "seconds": 29,
+              "text": "22 mins",
+              "total_seconds": 1349.786737,
+              "type": "file"
+            },
+            {
+              "digital": "0:15:32",
+              "hours": 0,
+              "minutes": 15,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/node_modules/typeless/src/createModule.ts",
+              "percent": 6.79,
+              "seconds": 32,
+              "text": "15 mins",
+              "total_seconds": 932.401748,
+              "type": "file"
+            },
+            {
+              "digital": "0:11:46",
+              "hours": 0,
+              "minutes": 11,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/node_modules/next/dist/next-server/lib/dynamic.d.ts",
+              "percent": 5.14,
+              "seconds": 46,
+              "text": "11 mins",
+              "total_seconds": 706.198924,
+              "type": "file"
+            },
+            {
+              "digital": "0:09:31",
+              "hours": 0,
+              "minutes": 9,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/features/counter/module.tsx",
+              "percent": 4.16,
+              "seconds": 31,
+              "text": "9 mins",
+              "total_seconds": 571.263344,
+              "type": "file"
+            },
+            {
+              "digital": "0:08:38",
+              "hours": 0,
+              "minutes": 8,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/components/HmrWrapper.tsx",
+              "percent": 3.78,
+              "seconds": 38,
+              "text": "8 mins",
+              "total_seconds": 518.849088,
+              "type": "file"
+            },
+            {
+              "digital": "0:08:33",
+              "hours": 0,
+              "minutes": 8,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/features/counter/components/counter-view.tsx",
+              "percent": 3.74,
+              "seconds": 33,
+              "text": "8 mins",
+              "total_seconds": 513.034518,
+              "type": "file"
+            },
+            {
+              "digital": "0:04:23",
+              "hours": 0,
+              "minutes": 4,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/components/Hot.tsx",
+              "percent": 1.92,
+              "seconds": 23,
+              "text": "4 mins",
+              "total_seconds": 263.463989,
+              "type": "file"
+            },
+            {
+              "digital": "0:03:16",
+              "hours": 0,
+              "minutes": 3,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/pages/_app.tsx",
+              "percent": 1.43,
+              "seconds": 16,
+              "text": "3 mins",
+              "total_seconds": 196.648735,
+              "type": "file"
+            },
+            {
+              "digital": "0:02:50",
+              "hours": 0,
+              "minutes": 2,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/node_modules/typeless/src/TypelessContext.tsx",
+              "percent": 1.24,
+              "seconds": 50,
+              "text": "2 mins",
+              "total_seconds": 170.304129,
+              "type": "file"
+            },
+            {
+              "digital": "0:02:06",
+              "hours": 0,
+              "minutes": 2,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/node_modules/typeless/src/onHmr.tsx",
+              "percent": 0.92,
+              "seconds": 6,
+              "text": "2 mins",
+              "total_seconds": 126.913277,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:49",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/package.json",
+              "percent": 0.8,
+              "seconds": 49,
+              "text": "1 min",
+              "total_seconds": 109.392796,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:25",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/node_modules/typeless/src/useRegistry.ts",
+              "percent": 0.62,
+              "seconds": 25,
+              "text": "1 min",
+              "total_seconds": 85.683168,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:22",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/pages/index.tsx",
+              "percent": 0.6,
+              "seconds": 22,
+              "text": "1 min",
+              "total_seconds": 82.448691,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:50",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/components/app.tsx",
+              "percent": 0.37,
+              "seconds": 50,
+              "text": "50 secs",
+              "total_seconds": 50.392422,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:32",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/features/counter/symbol.ts",
+              "percent": 0.23,
+              "seconds": 32,
+              "text": "32 secs",
+              "total_seconds": 32.161759,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:29",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/features/counter/interface.ts",
+              "percent": 0.22,
+              "seconds": 29,
+              "text": "29 secs",
+              "total_seconds": 29.673166,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:28",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/pages/index.js",
+              "percent": 0.21,
+              "seconds": 28,
+              "text": "28 secs",
+              "total_seconds": 28.671116,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:28",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/node_modules/@types/react/index.d.ts",
+              "percent": 0.21,
+              "seconds": 28,
+              "text": "28 secs",
+              "total_seconds": 28.607799,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:24",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/src/components/app-provider.tsx",
+              "percent": 0.18,
+              "seconds": 24,
+              "text": "24 secs",
+              "total_seconds": 24.058693,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:11",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/node_modules/@types/webpack-env/index.d.ts",
+              "percent": 0.08,
+              "seconds": 11,
+              "text": "11 secs",
+              "total_seconds": 11.136189,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:10",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/node_modules/typeless/src/useMappedState.ts",
+              "percent": 0.08,
+              "seconds": 10,
+              "text": "10 secs",
+              "total_seconds": 10.651315,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:10",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/tsconfig.json",
+              "percent": 0.08,
+              "seconds": 10,
+              "text": "10 secs",
+              "total_seconds": 10.324934,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:06",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/pages/index.tsx",
+              "percent": 0.05,
+              "seconds": 6,
+              "text": "6 secs",
+              "total_seconds": 6.755665,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:06",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/.gitignore",
+              "percent": 0.05,
+              "seconds": 6,
+              "text": "6 secs",
+              "total_seconds": 6.679333,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:06",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/pages/api/hello.js",
+              "percent": 0.05,
+              "seconds": 6,
+              "text": "6 secs",
+              "total_seconds": 6.66786,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:02",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/README.md",
+              "percent": 0.02,
+              "seconds": 2,
+              "text": "2 secs",
+              "total_seconds": 2.975127,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:00",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/next-typeless/yarn.lock",
+              "percent": 0.0,
+              "seconds": 0,
+              "text": "0 secs",
+              "total_seconds": 0.510797,
+              "type": "file"
+            }
+          ],
+          "grand_total": {
+            "digital": "3:48",
+            "hours": 3,
+            "minutes": 48,
+            "text": "3 hrs 48 mins",
+            "total_seconds": 13727.905548
+          },
+          "languages": [
+            {
+              "digital": "3:46:02",
+              "hours": 3,
+              "minutes": 46,
+              "name": "TypeScript",
+              "percent": 98.8,
+              "seconds": 2,
+              "text": "3 hrs 46 mins",
+              "total_seconds": 13562.683585
+            },
+            {
+              "digital": "0:01:59",
+              "hours": 0,
+              "minutes": 1,
+              "name": "JSON",
+              "percent": 0.87,
+              "seconds": 59,
+              "text": "1 min",
+              "total_seconds": 119.71773
+            },
+            {
+              "digital": "0:00:35",
+              "hours": 0,
+              "minutes": 0,
+              "name": "JavaScript",
+              "percent": 0.26,
+              "seconds": 35,
+              "text": "35 secs",
+              "total_seconds": 35.338976
+            },
+            {
+              "digital": "0:00:06",
+              "hours": 0,
+              "minutes": 0,
+              "name": "Git Config",
+              "percent": 0.05,
+              "seconds": 6,
+              "text": "6 secs",
+              "total_seconds": 6.679333
+            },
+            {
+              "digital": "0:00:02",
+              "hours": 0,
+              "minutes": 0,
+              "name": "Markdown",
+              "percent": 0.02,
+              "seconds": 2,
+              "text": "2 secs",
+              "total_seconds": 2.975127
+            },
+            {
+              "digital": "0:00:00",
+              "hours": 0,
+              "minutes": 0,
+              "name": "Other",
+              "percent": 0.0,
+              "seconds": 0,
+              "text": "0 secs",
+              "total_seconds": 0.510797
+            }
+          ],
+          "machines": [
+            {
+              "digital": "3:48:47",
+              "hours": 3,
+              "machine_name_id": "e3625541-34bc-464e-b27f-117e99d9f302",
+              "minutes": 48,
+              "name": "sisisinnoMacBook-Pro.local",
+              "percent": 100.0,
+              "seconds": 47,
+              "text": "3 hrs 48 mins",
+              "total_seconds": 13727.905548
+            }
+          ],
+          "operating_systems": [
+            {
+              "digital": "3:48:47",
+              "hours": 3,
+              "minutes": 48,
+              "name": "Mac",
+              "percent": 100.0,
+              "seconds": 47,
+              "text": "3 hrs 48 mins",
+              "total_seconds": 13727.905548
+            }
+          ],
+          "range": {
+            "date": "2020-10-18",
+            "end": "2020-10-18T14:59:59Z",
+            "start": "2020-10-17T15:00:00Z",
+            "text": "Sun Oct 18th 2020",
+            "timezone": "Asia/Tokyo"
+          }
+        }
+      ],
+      "end": "2020-10-18T14:59:59Z",
+      "start": "2020-10-17T15:00:00Z"
+    },
+    "nextjs-blog": {
+      "available_branches": [
+        "main",
+        "master"
+      ],
+      "branches": [],
+      "data": [
+        {
+          "branches": [
+            {
+              "digital": "1:14:40",
+              "hours": 1,
+              "minutes": 14,
+              "name": "master",
+              "percent": 55.82,
+              "seconds": 40,
+              "text": "1 hr 14 mins",
+              "total_seconds": 4480.324948
+            },
+            {
+              "digital": "0:59:05",
+              "hours": 0,
+              "minutes": 59,
+              "name": "main",
+              "percent": 44.18,
+              "seconds": 5,
+              "text": "59 mins",
+              "total_seconds": 3545.766061
+            }
+          ],
+          "categories": [
+            {
+              "digital": "2:13:46",
+              "hours": 2,
+              "minutes": 13,
+              "name": "Coding",
+              "percent": 100.0,
+              "seconds": 46,
+              "text": "2 hrs 13 mins",
+              "total_seconds": 8026.091009
+            }
+          ],
+          "dependencies": [],
+          "editors": [
+            {
+              "digital": "2:13:46",
+              "hours": 2,
+              "minutes": 13,
+              "name": "VS Code",
+              "percent": 100.0,
+              "seconds": 46,
+              "text": "2 hrs 13 mins",
+              "total_seconds": 8026.091009
+            }
+          ],
+          "entities": [
+            {
+              "digital": "0:27:46",
+              "hours": 0,
+              "minutes": 27,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/index.tsx",
+              "percent": 20.77,
+              "seconds": 46,
+              "text": "27 mins",
+              "total_seconds": 1666.820297,
+              "type": "file"
+            },
+            {
+              "digital": "0:22:33",
+              "hours": 0,
+              "minutes": 22,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/api/hello.js",
+              "percent": 16.86,
+              "seconds": 33,
+              "text": "22 mins",
+              "total_seconds": 1353.153355,
+              "type": "file"
+            },
+            {
+              "digital": "0:19:25",
+              "hours": 0,
+              "minutes": 19,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/index.js",
+              "percent": 14.52,
+              "seconds": 25,
+              "text": "19 mins",
+              "total_seconds": 1165.389117,
+              "type": "file"
+            },
+            {
+              "digital": "0:19:23",
+              "hours": 0,
+              "minutes": 19,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/posts/[id].js",
+              "percent": 14.5,
+              "seconds": 23,
+              "text": "19 mins",
+              "total_seconds": 1163.880034,
+              "type": "file"
+            },
+            {
+              "digital": "0:15:36",
+              "hours": 0,
+              "minutes": 15,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/posts/[id].tsx",
+              "percent": 11.67,
+              "seconds": 36,
+              "text": "15 mins",
+              "total_seconds": 936.501038,
+              "type": "file"
+            },
+            {
+              "digital": "0:09:12",
+              "hours": 0,
+              "minutes": 9,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/lib/posts.js",
+              "percent": 6.88,
+              "seconds": 12,
+              "text": "9 mins",
+              "total_seconds": 552.456467,
+              "type": "file"
+            },
+            {
+              "digital": "0:03:47",
+              "hours": 0,
+              "minutes": 3,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/node_modules/next/dist/client/router.d.ts",
+              "percent": 2.83,
+              "seconds": 47,
+              "text": "3 mins",
+              "total_seconds": 227.074613,
+              "type": "file"
+            },
+            {
+              "digital": "0:03:21",
+              "hours": 0,
+              "minutes": 3,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/posts/first-post.js",
+              "percent": 2.51,
+              "seconds": 21,
+              "text": "3 mins",
+              "total_seconds": 201.389142,
+              "type": "file"
+            },
+            {
+              "digital": "0:02:56",
+              "hours": 0,
+              "minutes": 2,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/api/hello.ts",
+              "percent": 2.2,
+              "seconds": 56,
+              "text": "2 mins",
+              "total_seconds": 176.88749,
+              "type": "file"
+            },
+            {
+              "digital": "0:02:13",
+              "hours": 0,
+              "minutes": 2,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/lib/posts.ts",
+              "percent": 1.67,
+              "seconds": 13,
+              "text": "2 mins",
+              "total_seconds": 133.753222,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:32",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/components/date.js",
+              "percent": 1.15,
+              "seconds": 32,
+              "text": "1 min",
+              "total_seconds": 92.060732,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:16",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/tsconfig.json",
+              "percent": 0.96,
+              "seconds": 16,
+              "text": "1 min",
+              "total_seconds": 76.85428,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:09",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/components/layout.tsx",
+              "percent": 0.87,
+              "seconds": 9,
+              "text": "1 min",
+              "total_seconds": 69.514108,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:46",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/node_modules/next/types/index.d.ts",
+              "percent": 0.58,
+              "seconds": 46,
+              "text": "46 secs",
+              "total_seconds": 46.226738,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:40",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/_app.tsx",
+              "percent": 0.51,
+              "seconds": 40,
+              "text": "40 secs",
+              "total_seconds": 40.898343,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:40",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/components/date.tsx",
+              "percent": 0.5,
+              "seconds": 40,
+              "text": "40 secs",
+              "total_seconds": 40.483163,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:28",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/node_modules/@types/node/querystring.d.ts",
+              "percent": 0.35,
+              "seconds": 28,
+              "text": "28 secs",
+              "total_seconds": 28.073872,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:23",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/README.md",
+              "percent": 0.29,
+              "seconds": 23,
+              "text": "23 secs",
+              "total_seconds": 23.127814,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:13",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/node_modules/@types/node/globals.d.ts",
+              "percent": 0.17,
+              "seconds": 13,
+              "text": "13 secs",
+              "total_seconds": 13.92144,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:06",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/pages/_app.js",
+              "percent": 0.07,
+              "seconds": 6,
+              "text": "6 secs",
+              "total_seconds": 6.018928,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:04",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/node_modules/next/dist/next-server/lib/router/router.d.ts",
+              "percent": 0.05,
+              "seconds": 4,
+              "text": "4 secs",
+              "total_seconds": 4.39862,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:03",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/next-env.d.ts",
+              "percent": 0.05,
+              "seconds": 3,
+              "text": "3 secs",
+              "total_seconds": 3.743297,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:03",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin-sandbox/nextjs-blog/components/layout.js",
+              "percent": 0.04,
+              "seconds": 3,
+              "text": "3 secs",
+              "total_seconds": 3.464899,
+              "type": "file"
+            }
+          ],
+          "grand_total": {
+            "digital": "2:13",
+            "hours": 2,
+            "minutes": 13,
+            "text": "2 hrs 13 mins",
+            "total_seconds": 8026.091009
+          },
+          "languages": [
+            {
+              "digital": "1:15:37",
+              "hours": 1,
+              "minutes": 15,
+              "name": "JavaScript",
+              "percent": 56.54,
+              "seconds": 37,
+              "text": "1 hr 15 mins",
+              "total_seconds": 4537.812674
+            },
+            {
+              "digital": "0:56:28",
+              "hours": 0,
+              "minutes": 56,
+              "name": "TypeScript",
+              "percent": 42.22,
+              "seconds": 28,
+              "text": "56 mins",
+              "total_seconds": 3388.296241
+            },
+            {
+              "digital": "0:01:16",
+              "hours": 0,
+              "minutes": 1,
+              "name": "JSON",
+              "percent": 0.96,
+              "seconds": 16,
+              "text": "1 min",
+              "total_seconds": 76.85428
+            },
+            {
+              "digital": "0:00:23",
+              "hours": 0,
+              "minutes": 0,
+              "name": "Markdown",
+              "percent": 0.29,
+              "seconds": 23,
+              "text": "23 secs",
+              "total_seconds": 23.127814
+            }
+          ],
+          "machines": [
+            {
+              "digital": "2:13:46",
+              "hours": 2,
+              "machine_name_id": "e3625541-34bc-464e-b27f-117e99d9f302",
+              "minutes": 13,
+              "name": "sisisinnoMacBook-Pro.local",
+              "percent": 100.0,
+              "seconds": 46,
+              "text": "2 hrs 13 mins",
+              "total_seconds": 8026.091009
+            }
+          ],
+          "operating_systems": [
+            {
+              "digital": "2:13:46",
+              "hours": 2,
+              "minutes": 13,
+              "name": "Mac",
+              "percent": 100.0,
+              "seconds": 46,
+              "text": "2 hrs 13 mins",
+              "total_seconds": 8026.091009
+            }
+          ],
+          "range": {
+            "date": "2020-10-18",
+            "end": "2020-10-18T14:59:59Z",
+            "start": "2020-10-17T15:00:00Z",
+            "text": "Sun Oct 18th 2020",
+            "timezone": "Asia/Tokyo"
+          }
+        }
+      ],
+      "end": "2020-10-18T14:59:59Z",
+      "start": "2020-10-17T15:00:00Z"
+    },
+    "typeless-starter": {
+      "available_branches": [
+        "master"
+      ],
+      "branches": [],
+      "data": [
+        {
+          "branches": [
+            {
+              "digital": "0:32:01",
+              "hours": 0,
+              "minutes": 32,
+              "name": "master",
+              "percent": 100.0,
+              "seconds": 1,
+              "text": "32 mins",
+              "total_seconds": 1921.674262
+            }
+          ],
+          "categories": [
+            {
+              "digital": "0:32:01",
+              "hours": 0,
+              "minutes": 32,
+              "name": "Coding",
+              "percent": 100.0,
+              "seconds": 1,
+              "text": "32 mins",
+              "total_seconds": 1921.674262
+            }
+          ],
+          "dependencies": [],
+          "editors": [
+            {
+              "digital": "0:32:01",
+              "hours": 0,
+              "minutes": 32,
+              "name": "VS Code",
+              "percent": 100.0,
+              "seconds": 1,
+              "text": "32 mins",
+              "total_seconds": 1921.674262
+            }
+          ],
+          "entities": [
+            {
+              "digital": "0:28:54",
+              "hours": 0,
+              "minutes": 28,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/src/index.tsx",
+              "percent": 90.27,
+              "seconds": 54,
+              "text": "28 mins",
+              "total_seconds": 1734.660249,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:10",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/package.json",
+              "percent": 3.67,
+              "seconds": 10,
+              "text": "1 min",
+              "total_seconds": 70.46683,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:55",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/src/app/features/sample/components/SampleView.tsx",
+              "percent": 2.89,
+              "seconds": 55,
+              "text": "55 secs",
+              "total_seconds": 55.586613,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:22",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/src/app/types/AppRouteDefinitions.ts",
+              "percent": 1.17,
+              "seconds": 22,
+              "text": "22 secs",
+              "total_seconds": 22.531399,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:11",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/node_modules/typeless/src/useMappedState.ts",
+              "percent": 0.6,
+              "seconds": 11,
+              "text": "11 secs",
+              "total_seconds": 11.464541,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:08",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/node_modules/typeless/src/TypelessContext.tsx",
+              "percent": 0.42,
+              "seconds": 8,
+              "text": "8 secs",
+              "total_seconds": 8.148113,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:08",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/src/app/components/AppRoutes.tsx",
+              "percent": 0.42,
+              "seconds": 8,
+              "text": "8 secs",
+              "total_seconds": 8.063861,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:07",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/src/app/App.tsx",
+              "percent": 0.41,
+              "seconds": 7,
+              "text": "7 secs",
+              "total_seconds": 7.8052,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:02",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/sisisin/typeless-starter/node_modules/@types/react/index.d.ts",
+              "percent": 0.15,
+              "seconds": 2,
+              "text": "2 secs",
+              "total_seconds": 2.947456,
+              "type": "file"
+            }
+          ],
+          "grand_total": {
+            "digital": "0:32",
+            "hours": 0,
+            "minutes": 32,
+            "text": "32 mins",
+            "total_seconds": 1921.674262
+          },
+          "languages": [
+            {
+              "digital": "0:30:51",
+              "hours": 0,
+              "minutes": 30,
+              "name": "TypeScript",
+              "percent": 96.33,
+              "seconds": 51,
+              "text": "30 mins",
+              "total_seconds": 1851.207432
+            },
+            {
+              "digital": "0:01:10",
+              "hours": 0,
+              "minutes": 1,
+              "name": "JSON",
+              "percent": 3.67,
+              "seconds": 10,
+              "text": "1 min",
+              "total_seconds": 70.46683
+            }
+          ],
+          "machines": [
+            {
+              "digital": "0:32:01",
+              "hours": 0,
+              "machine_name_id": "e3625541-34bc-464e-b27f-117e99d9f302",
+              "minutes": 32,
+              "name": "sisisinnoMacBook-Pro.local",
+              "percent": 100.0,
+              "seconds": 1,
+              "text": "32 mins",
+              "total_seconds": 1921.674262
+            }
+          ],
+          "operating_systems": [
+            {
+              "digital": "0:32:01",
+              "hours": 0,
+              "minutes": 32,
+              "name": "Mac",
+              "percent": 100.0,
+              "seconds": 1,
+              "text": "32 mins",
+              "total_seconds": 1921.674262
+            }
+          ],
+          "range": {
+            "date": "2020-10-18",
+            "end": "2020-10-18T14:59:59Z",
+            "start": "2020-10-17T15:00:00Z",
+            "text": "Sun Oct 18th 2020",
+            "timezone": "Asia/Tokyo"
+          }
+        }
+      ],
+      "end": "2020-10-18T14:59:59Z",
+      "start": "2020-10-17T15:00:00Z"
+    },
+    "create-react-app-starter": {
+      "available_branches": [
+        "master"
+      ],
+      "branches": [],
+      "data": [
+        {
+          "branches": [
+            {
+              "digital": "0:28:21",
+              "hours": 0,
+              "minutes": 28,
+              "name": "master",
+              "percent": 100.0,
+              "seconds": 21,
+              "text": "28 mins",
+              "total_seconds": 1701.975539
+            }
+          ],
+          "categories": [
+            {
+              "digital": "0:28:21",
+              "hours": 0,
+              "minutes": 28,
+              "name": "Coding",
+              "percent": 100.0,
+              "seconds": 21,
+              "text": "28 mins",
+              "total_seconds": 1701.975539
+            }
+          ],
+          "dependencies": [],
+          "editors": [
+            {
+              "digital": "0:28:21",
+              "hours": 0,
+              "minutes": 28,
+              "name": "VS Code",
+              "percent": 100.0,
+              "seconds": 21,
+              "text": "28 mins",
+              "total_seconds": 1701.975539
+            }
+          ],
+          "entities": [
+            {
+              "digital": "0:19:54",
+              "hours": 0,
+              "minutes": 19,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/index.tsx",
+              "percent": 70.19,
+              "seconds": 54,
+              "text": "19 mins",
+              "total_seconds": 1194.567448,
+              "type": "file"
+            },
+            {
+              "digital": "0:02:39",
+              "hours": 0,
+              "minutes": 2,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/features/sample1/components/Sample1View.tsx",
+              "percent": 9.36,
+              "seconds": 39,
+              "text": "2 mins",
+              "total_seconds": 159.338217,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:41",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/package.json",
+              "percent": 5.98,
+              "seconds": 41,
+              "text": "1 min",
+              "total_seconds": 101.799817,
+              "type": "file"
+            },
+            {
+              "digital": "0:01:04",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/features/sample1/module.tsx",
+              "percent": 3.82,
+              "seconds": 4,
+              "text": "1 min",
+              "total_seconds": 64.9416,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:45",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/features/sample1/interface.tsx",
+              "percent": 2.66,
+              "seconds": 45,
+              "text": "45 secs",
+              "total_seconds": 45.312188,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:42",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/node_modules/typeless/src/onHmr.tsx",
+              "percent": 2.47,
+              "seconds": 42,
+              "text": "42 secs",
+              "total_seconds": 42.05967,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:37",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/features/sample2/components/Sample2View.tsx",
+              "percent": 2.21,
+              "seconds": 37,
+              "text": "37 secs",
+              "total_seconds": 37.663562,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:20",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/features/global/module.tsx",
+              "percent": 1.21,
+              "seconds": 20,
+              "text": "20 secs",
+              "total_seconds": 20.640162,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:18",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/node_modules/typeless-router/package.json",
+              "percent": 1.11,
+              "seconds": 18,
+              "text": "18 secs",
+              "total_seconds": 18.818505,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:05",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/features/router.ts",
+              "percent": 0.34,
+              "seconds": 5,
+              "text": "5 secs",
+              "total_seconds": 5.763084,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:04",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/components/App.tsx",
+              "percent": 0.24,
+              "seconds": 4,
+              "text": "4 secs",
+              "total_seconds": 4.063485,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:03",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/components/ReduxInput.tsx",
+              "percent": 0.18,
+              "seconds": 3,
+              "text": "3 secs",
+              "total_seconds": 3.107789,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:02",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/features/login/module.tsx",
+              "percent": 0.14,
+              "seconds": 2,
+              "text": "2 secs",
+              "total_seconds": 2.344087,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:01",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/create-react-app-starter/src/features/sample2/module.tsx",
+              "percent": 0.09,
+              "seconds": 1,
+              "text": "1 sec",
+              "total_seconds": 1.555925,
+              "type": "file"
+            }
+          ],
+          "grand_total": {
+            "digital": "0:28",
+            "hours": 0,
+            "minutes": 28,
+            "text": "28 mins",
+            "total_seconds": 1701.975539
+          },
+          "languages": [
+            {
+              "digital": "0:26:21",
+              "hours": 0,
+              "minutes": 26,
+              "name": "TypeScript",
+              "percent": 92.91,
+              "seconds": 21,
+              "text": "26 mins",
+              "total_seconds": 1581.357217
+            },
+            {
+              "digital": "0:02:00",
+              "hours": 0,
+              "minutes": 2,
+              "name": "JSON",
+              "percent": 7.09,
+              "seconds": 0,
+              "text": "2 mins",
+              "total_seconds": 120.618322
+            }
+          ],
+          "machines": [
+            {
+              "digital": "0:28:21",
+              "hours": 0,
+              "machine_name_id": "e3625541-34bc-464e-b27f-117e99d9f302",
+              "minutes": 28,
+              "name": "sisisinnoMacBook-Pro.local",
+              "percent": 100.0,
+              "seconds": 21,
+              "text": "28 mins",
+              "total_seconds": 1701.975539
+            }
+          ],
+          "operating_systems": [
+            {
+              "digital": "0:28:21",
+              "hours": 0,
+              "minutes": 28,
+              "name": "Mac",
+              "percent": 100.0,
+              "seconds": 21,
+              "text": "28 mins",
+              "total_seconds": 1701.975539
+            }
+          ],
+          "range": {
+            "date": "2020-10-18",
+            "end": "2020-10-18T14:59:59Z",
+            "start": "2020-10-17T15:00:00Z",
+            "text": "Sun Oct 18th 2020",
+            "timezone": "Asia/Tokyo"
+          }
+        }
+      ],
+      "end": "2020-10-18T14:59:59Z",
+      "start": "2020-10-17T15:00:00Z"
+    },
+    "typeless": {
+      "available_branches": [
+        "refactor-tsconfig"
+      ],
+      "branches": [],
+      "data": [
+        {
+          "branches": [
+            {
+              "digital": "0:02:09",
+              "hours": 0,
+              "minutes": 2,
+              "name": "refactor-tsconfig",
+              "percent": 100.0,
+              "seconds": 9,
+              "text": "2 mins",
+              "total_seconds": 129.353166
+            }
+          ],
+          "categories": [
+            {
+              "digital": "0:02:09",
+              "hours": 0,
+              "minutes": 2,
+              "name": "Coding",
+              "percent": 100.0,
+              "seconds": 9,
+              "text": "2 mins",
+              "total_seconds": 129.353166
+            }
+          ],
+          "dependencies": [],
+          "editors": [
+            {
+              "digital": "0:02:09",
+              "hours": 0,
+              "minutes": 2,
+              "name": "VS Code",
+              "percent": 100.0,
+              "seconds": 9,
+              "text": "2 mins",
+              "total_seconds": 129.353166
+            }
+          ],
+          "entities": [
+            {
+              "digital": "0:01:26",
+              "hours": 0,
+              "minutes": 1,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/typeless/packages/typeless/__tests__/epic-hmr.test.tsx",
+              "percent": 66.71,
+              "seconds": 26,
+              "text": "1 min",
+              "total_seconds": 86.287328,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:22",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/typeless/examples/src/basic-hmr/components/App.tsx",
+              "percent": 17.61,
+              "seconds": 22,
+              "text": "22 secs",
+              "total_seconds": 22.781744,
+              "type": "file"
+            },
+            {
+              "digital": "0:00:20",
+              "hours": 0,
+              "minutes": 0,
+              "name": "/Users/sisisin-mbp/ghq/github.com/typeless-js/typeless/examples/src/basic-hmr/index.tsx",
+              "percent": 15.68,
+              "seconds": 20,
+              "text": "20 secs",
+              "total_seconds": 20.284094,
+              "type": "file"
+            }
+          ],
+          "grand_total": {
+            "digital": "0:02",
+            "hours": 0,
+            "minutes": 2,
+            "text": "2 mins",
+            "total_seconds": 129.353166
+          },
+          "languages": [
+            {
+              "digital": "0:02:09",
+              "hours": 0,
+              "minutes": 2,
+              "name": "TypeScript",
+              "percent": 100.0,
+              "seconds": 9,
+              "text": "2 mins",
+              "total_seconds": 129.353166
+            }
+          ],
+          "machines": [
+            {
+              "digital": "0:02:09",
+              "hours": 0,
+              "machine_name_id": "e3625541-34bc-464e-b27f-117e99d9f302",
+              "minutes": 2,
+              "name": "sisisinnoMacBook-Pro.local",
+              "percent": 100.0,
+              "seconds": 9,
+              "text": "2 mins",
+              "total_seconds": 129.353166
+            }
+          ],
+          "operating_systems": [
+            {
+              "digital": "0:02:09",
+              "hours": 0,
+              "minutes": 2,
+              "name": "Mac",
+              "percent": 100.0,
+              "seconds": 9,
+              "text": "2 mins",
+              "total_seconds": 129.353166
+            }
+          ],
+          "range": {
+            "date": "2020-10-18",
+            "end": "2020-10-18T14:59:59Z",
+            "start": "2020-10-17T15:00:00Z",
+            "text": "Sun Oct 18th 2020",
+            "timezone": "Asia/Tokyo"
+          }
+        }
+      ],
+      "end": "2020-10-18T14:59:59Z",
+      "start": "2020-10-17T15:00:00Z"
+    }
+  }
+}

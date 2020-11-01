@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class AddProjectReference < ActiveRecord::Migration[5.2]
   def up
     add_reference :branches, :project, foreign_key: true, null: false, after: :id
