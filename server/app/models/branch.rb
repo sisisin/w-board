@@ -1,3 +1,3 @@
 class Branch < ApplicationRecord
-  include BasicMaster
+  include BasicMasterWithProject
 end

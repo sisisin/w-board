@@ -8,4 +8,9 @@ namespace :import do
   task run: :environment do
     WakatimeImporter.new.main
   end
+
+  desc 'import from raw'
+  task from_raw: :environment do
+    ImportRunner.new.run
+  end
 end
